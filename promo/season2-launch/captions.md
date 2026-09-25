@@ -40,3 +40,20 @@ Keep stickers in the empty band between "coming soon" and the bottom text.
 
 🏏 *Imama Cricket League, Season 2 is coming soon.*
 Teams, fixtures and registration details are on the way. Follow us on Instagram @[your_handle] to be first to know, and share this with your team.
+
+---
+
+# v2: photo versions ("round two.")
+
+Files: `ig-post-round-two-batsman.png` (main post), `ig-post-round-two-ball.png` (alternate or second post), `ig-story-round-two.png`.
+Background photos are AI-generated with Higgsfield (Nano Banana 2) and stored in `source/photos/`. They show no real people or grounds.
+
+## Caption
+
+Round two. 🏏
+The floodlights are coming back on. Imama Cricket League, Season 2, is coming soon.
+
+New season. Same rivalries.
+Follow and turn on notifications to be first to hear about teams, fixtures and registration.
+
+#ImamaCricketLeague #ICLSeason2 #UAECricket #UAEImama #ComingSoon
