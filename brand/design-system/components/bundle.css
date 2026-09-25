@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700&family=Montserrat:wght@500;600;700&display=swap");
+
+body { background: var(--surface); color: var(--ink); font-family: var(--font-sans); }
+.icl-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+.icl-caps { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 700; letter-spacing: .32em; text-transform: uppercase; }
+.icl-num { font-variant-numeric: tabular-nums; }
+
+/* Button */
+.icl-btn { font: 700 14px/20px var(--font-sans); letter-spacing: .04em; padding: var(--space-3) var(--space-5); border-radius: var(--radius-md); border: 2px solid transparent; cursor: pointer; }
+.icl-btn:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.icl-btn--primary { background: var(--league-purple); color: var(--on-league-purple); }
+.icl-btn--go { background: var(--imama-green); color: var(--on-imama-green); }
+.icl-btn--ghost { background: transparent; color: var(--league-purple); border-color: var(--league-purple); }
+.icl-btn[disabled] { opacity: .45; cursor: not-allowed; }
+
+/* Badges */
+.icl-badge { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-1) var(--space-3); border-radius: var(--radius-pill); font: 700 11px/16px var(--font-sans); letter-spacing: .28em; text-transform: uppercase; }
+.icl-badge--season { background: var(--league-purple); color: var(--on-league-purple); }
+.icl-badge--season b { color: var(--boundary-gold); letter-spacing: 0; font-size: 13px; }
+.icl-badge--live { background: var(--live); color: var(--on-live); }
+.icl-badge--live::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+.icl-badge--gold { background: var(--boundary-gold); color: var(--night); }
+.icl-badge--outline { color: var(--imama-green); box-shadow: inset 0 0 0 1.5px var(--imama-green); }
+
+/* Score card */
+.icl-score { background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); box-shadow: var(--shadow-card); padding: var(--space-5); display: grid; gap: var(--space-4); max-width: 420px; }
+.icl-score__top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-3); color: var(--ink-muted); }
+.icl-score__team { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: var(--space-3); }
+.icl-score__name { font: 700 18px/1.3 var(--font-sans); }
+.icl-score__runs { font: 700 44px/1 var(--font-display); font-variant-numeric: tabular-nums; color: var(--league-purple); }
+.icl-score__runs small { font: 600 14px/1 var(--font-sans); color: var(--ink-muted); margin-left: var(--space-2); }
+.icl-score__team--batting .icl-score__runs { color: var(--imama-green); }
+.icl-score__status { border-top: 1px solid var(--hairline); padding-top: var(--space-3); font: 600 14px/1.45 var(--font-sans); color: var(--ink); }
+
+/* Fixture row */
+.icl-fixture { display: grid; grid-template-columns: 72px 1fr auto; gap: var(--space-4); align-items: center; padding: var(--space-4); background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: var(--radius-md); }
+.icl-fixture__date { text-align: center; border-right: 1px solid var(--hairline); padding-right: var(--space-4); }
+.icl-fixture__day { font: 700 28px/1 var(--font-display); color: var(--league-purple); font-variant-numeric: tabular-nums; }
+.icl-fixture__mon { font: 700 11px/16px var(--font-sans); letter-spacing: .28em; color: var(--ink-muted); }
+.icl-fixture__teams { font: 700 16px/1.35 var(--font-sans); }
+.icl-fixture__teams span { color: var(--ink-muted); font-weight: 600; }
+.icl-fixture__meta { font: 500 13px/1.45 var(--font-sans); color: var(--ink-muted); }
+
+/* Points table */
+.icl-table-wrap { overflow-x: auto; border: 1px solid var(--hairline); border-radius: var(--radius-md); background: var(--surface-raised); }
+.icl-table { width: 100%; border-collapse: collapse; font: 500 14px/1.4 var(--font-sans); font-variant-numeric: tabular-nums; }
+.icl-table th { background: var(--surface-sunken); color: var(--ink-muted); font: 700 11px/16px var(--font-sans); letter-spacing: .24em; text-transform: uppercase; text-align: right; padding: var(--space-3) var(--space-4); }
+.icl-table th:nth-child(-n+2), .icl-table td:nth-child(-n+2) { text-align: left; }
+.icl-table td { padding: var(--space-3) var(--space-4); border-top: 1px solid var(--hairline); text-align: right; }
+.icl-table td.pts { font-weight: 700; color: var(--league-purple); }
+.icl-table tr.q td:first-child { color: var(--imama-green); font-weight: 700; }
+.icl-table .nrr-pos { color: var(--imama-green); }
