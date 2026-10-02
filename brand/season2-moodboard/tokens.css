@@ -1,21 +1,20 @@
-/* ICL Season 2 · "Powerplay" poster tokens (moodboard v4: navy, green, blue; dark-led).
+/* ICL Season 2 · "Powerplay" poster tokens (moodboard v3, red and blue, final).
    Canvas: 1080×1350 feed, 1080×1920 story. All sizes below are canvas px. */
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400..700&family=Mr+Dafoe&display=swap");
 
 :root {
   /* colour */
-  --icl-navy:  #061433;   /* default ground and kit colour */
-  --icl-deep:  #030916;   /* near-black: portraits, results, signal look */
-  --icl-green: #1FCB62;   /* Imama green, brightened from the logo (#50A66B) for dark grounds: the hero */
-  --icl-blue:  #1234F9;   /* electric blue: ribbons, shards, halftone, team-sheet grounds */
-  --icl-chalk: #EEF2F7;   /* type only, never a ground */
+  --icl-crease: #F5F3EE;   /* default day ground */
+  --icl-red:    #E92D3C;   /* ball red: the hit colour */
+  --icl-blue:   #1234F9;   /* electric blue: kit, team sheets, numerals */
+  --icl-navy:   #061433;   /* night + signal (duotone) grounds */
+  --icl-ink:    #0B0C14;   /* type and data on light grounds */
+  --icl-white:  #FFFFFF;   /* type on red, blue, navy */
 
   /* text pairs (WCAG contrast)
-     chalk/navy 16.2 · deep/green 9.3 · green/navy 8.5 · chalk/blue 6.5
-     green/blue 3.4 (display only) · blue/navy 2.5 (shapes only) · chalk/green 1.9 NEVER */
-
-  /* kit stand-in: navy with green trim. Never a blue kit with orange/saffron trim (reads as India). */
+     ink/crease 17.6 · white/blue 7.3 · ink/red 4.6 · white/red 4.3 (24px+)
+     red/navy 4.2 (24px+) · red/crease 3.9 (display only) · red/blue 1.7 NEVER as text */
 
   /* type */
   --icl-font-display: "Archivo", "Arial Narrow", Arial, sans-serif;   /* font-stretch: 62%; weight 900; caps */
@@ -35,12 +34,12 @@
   /* frame */
   --icl-margin-side: 64px;
   --icl-margin-top: 54px;
-  --icl-grid: 54px;            /* graph-paper unit, electric blue at 25% */
-  --icl-logo-width: 168px;     /* top left, single colour: white, or deep on green */
-  --icl-radius-card: 24px;     /* frosted dark-glass UI cards only; nothing else above 8px */
+  --icl-grid: 54px;            /* graph-paper unit, ink at 8% */
+  --icl-logo-width: 168px;     /* top left, single colour only */
+  --icl-radius-card: 24px;     /* frosted UI cards only; nothing else above 8px */
   --icl-rule: 2px;             /* footer rule */
 
   /* signal (duotone) look */
   --icl-scanline: 5px;         /* 4–6px horizontal scanlines */
-  --icl-channel-split: 12px;   /* max offset: green left, blue right */
+  --icl-channel-split: 12px;   /* max offset: red left, blue right */
 }

@@ -1,4 +1,4 @@
-"""Build the self-contained Season 2 moodboard ("Powerplay", navy, green and blue).
+"""Build the self-contained Season 2 moodboard ("Powerplay", red and blue).
 
 Inlines fonts, the recoloured logo, Higgsfield frames, cut-outs and references.
 Usage: python3 build.py [artifact.html]  ->  ../ICL-Season2-Moodboard.html (+ a skeleton-free copy for publishing)
@@ -11,7 +11,7 @@ import sys
 HERE = pathlib.Path(__file__).parent
 ROOT = HERE.parents[2]
 OUT = HERE.parent / "ICL-Season2-Moodboard.html"
-DEEP, WHITE = "#030916", "#FFFFFF"
+INK, WHITE = "#0B0C14", "#FFFFFF"
 
 
 def data_uri(path):
@@ -43,7 +43,7 @@ def ref(n):
     return asset(f"r{n:02d}", lambda: data_uri(HERE / "references" / f"r{n:02d}.jpg"))
 
 
-# Reference families. R21–R23 (added 2 Oct) bring the team sheet, signal and grain looks.
+# Reference families. R21–R23 are the palette references that set the final red and blue.
 FAMILIES = {
     "Scale": [5, 9, 12, 13],
     "Motion": [10, 11, 16],
@@ -54,7 +54,7 @@ FAMILIES = {
     "Register": [17, 18, 19, 20],
 }
 FAMILY_OF = {n: fam for fam, ns in FAMILIES.items() for n in ns}
-PALETTE_REFS = [(21, "Team sheet"), (22, "Signal"), (23, "Grain")]  # shown large at the top of Sources
+PALETTE_REFS = [(21, "Team sheet"), (22, "Signal"), (23, "Grain")]
 
 # The wall: Higgsfield frames in display order -> (title, references answered).
 WALL = [
@@ -85,51 +85,51 @@ DEVICES = [
     ("Scale", "Giant numbers",
      "One numeral or word fills 60 to 70% of the poster and sits behind the player. Numbers in Display; names and words in the Serif.",
      ["One giant element per poster.", "The player's feet sit on or below its baseline.",
-      "Green numerals on Navy; Deep or darker-green numerals on Green."],
+      "Red numerals on Crease; Crease or darker-red numerals on Red."],
      ["numeral-02", "countdown-3", "serif-captain"]),
     ("Motion", "Ribbons & streaks",
      "Motion is drawn, not implied. Ribbons trace the real action path and streaks trail a runner.",
-     ["Ribbons follow the bat swing, the dive or the bowling arc.", "Stripes run blue, a thin chalk seam, then green, from the outside in.",
+     ["Ribbons follow the bat swing, the dive or the bowling arc.", "Stripes run blue, white, red from the outside in.",
       "Streaks run horizontally, behind the direction of travel.", "One motion device per poster."],
      ["ribbon-keeper", "speed-streak", "story-matchday"]),
     ("Depth", "Break the frame",
      "Every post has a layer the player breaks through: a window, a stack of photo tiles, a UI card.",
      ["A window holds the place: the Dubai skyline, the floodlit ground.",
       "Collages use three tiles at most and one UI card: walkout song, scorecard or post.",
-      "UI cards are frosted dark glass (Deep at 70%) with a 24px radius. Nothing else is rounded past 8px."],
+      "UI cards are frosted Crease at 85% with a 24px radius. Nothing else is rounded past 8px."],
      ["breakout-window", "collage-walkout"]),
     ("Structure", "Grids, circles, sheets",
      "The information posts. Squads, fixtures, match days and standings sit on a visible system.",
-     ["Graph-paper grid at 54px on the 1080 canvas, electric blue at 25%.", "Role codes in outlined circles: BAT, BWL, WK, AR.",
-      "One hand-drawn green circle per poster, on the date or stat that matters.",
-      "Team sheets follow R21: electric blue ground, a green fade, the name set vertically, the squad in one column.",
-      "Team posts get one green diagonal band with a tone-on-tone palm pattern."],
+     ["Graph-paper grid at 54px on the 1080 canvas, Ink at 8%.", "Role codes in outlined circles: BAT, BWL, WK, AR.",
+      "One hand-drawn red circle per poster, on the date or stat that matters.",
+      "Team sheets follow R21: blue ground, the name set vertically, the squad in one column.",
+      "Team posts get one red diagonal band with a tone-on-tone palm pattern."],
      ["swiss-teamsheet", "calendar-matchday", "squad-grid", "diagonal-squad"]),
     ("Signal", "Duotone & scanlines",
-     "The cool one. The player rendered as a broadcast signal: green and blue duotone, scanlines, channel split and a motion smear on Deep.",
-     ["Blue carries the shadows, green the highlights, Deep the ground.", "Horizontal scanlines, 4 to 6px on the canvas.",
-      "Channel split of 12px or less: green left, blue right.",
+     "The cool one. The player rendered as a broadcast signal: red and blue duotone, scanlines, channel split and a motion smear on Navy.",
+     ["Blue carries the shadows, red the highlights, Navy the ground.", "Horizontal scanlines, 4 to 6px on the canvas.",
+      "Channel split of 12px or less: red left, blue right.",
       "For launches, finals and player reveals. One in every nine grid posts at most."],
      ["duotone-powerplay", "glitch-helmet"]),
     ("Texture", "Heat plates",
      "Plates fill the ground of countdowns, night posts and story backgrounds.",
-     ["Halftone dots, shattered shards or spray grain, in green and blue only.",
+     ["Halftone dots, shattered shards or spray grain, in red and blue only.",
       "Never behind a face; under type at 60% opacity or less.", "Grain is the one finish allowed on flat colour."],
      ["texture-halftone", "texture-shards", "grain-collage"]),
     ("Register", "Loud & quiet",
      "Two volumes. Loud for awards and milestones; quiet for nights, results and thank-yous.",
-     ["Loud: black-and-white player, green blocks, stacked Display caps, one blue script word crossing them.",
-      "Quiet: Deep ground, one light, one Serif word, no motion devices.", "Game day: Serif headline over a wide action band."],
+     ["Loud: black-and-white player, red blocks, stacked Display caps, one blue script word crossing them.",
+      "Quiet: Navy ground, one light, one Serif word, no motion devices.", "Game day: Serif headline over a wide action band."],
      ["loud-potm", "quiet-matchday", "gameday-split"]),
 ]
 
 # Speed streaks behind the bowler on template B: x, y, width, height (canvas px), colour.
-STREAKS = [(150, 790, 520, 12, "#030916"), (260, 830, 430, 22, "#1234F9"), (80, 878, 610, 9, "#061433"),
-           (330, 920, 370, 18, "#1234F9"), (190, 968, 500, 14, "#030916"), (400, 1012, 300, 22, "#1234F9"),
-           (250, 1058, 440, 9, "#061433")]
+STREAKS = [(150, 790, 520, 12, "#FFFFFF"), (260, 830, 430, 22, "#1234F9"), (80, 878, 610, 9, "#FFFFFF"),
+           (330, 920, 370, 18, "#061433"), (190, 968, 500, 14, "#FFFFFF"), (400, 1012, 300, 22, "#1234F9"),
+           (250, 1058, 440, 9, "#FFFFFF")]
 
 TICKER = "".join(f"<span>{w}<i>+</i></span>" for w in
-                 ["Powerplay", "Under the lights", "Season 02", "Imama Cricket League", "UAE 2026"] * 2)
+                 ["Powerplay", "Red vs blue", "Season 02", "Imama Cricket League", "UAE 2026"] * 2)
 
 
 def zoom_fig(name, cls, caption_html):
@@ -156,7 +156,7 @@ def refs_grid():
 
 def palette_refs():
     return "".join(f'<figure><img {ref(n)} alt="Reference R{n:02d}, {label}">'
-                   f'<figcaption><span>R{n:02d} · {label}</span><b>Added 2 Oct</b></figcaption></figure>'
+                   f'<figcaption><span>R{n:02d} · {label}</span><b>Palette</b></figcaption></figure>'
                    for n, label in PALETTE_REFS)
 
 
@@ -206,7 +206,7 @@ subs = {
 }
 for k, v in subs.items():
     html = html.replace(k, v)
-html = html.replace('src="{{logo:deep}}"', asset("logo-deep", lambda: logo(DEEP)))
+html = html.replace('src="{{logo:ink}}"', asset("logo-ink", lambda: logo(INK)))
 html = html.replace('src="{{logo:white}}"', asset("logo-white", lambda: logo(WHITE)))
 html = html.replace('src="{{img:key-visual}}"', gen("key-visual"))
 for p in (HERE / "cutouts").glob("*.webp"):
