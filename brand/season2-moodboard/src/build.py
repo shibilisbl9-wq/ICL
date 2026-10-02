@@ -10,7 +10,7 @@ OUT = HERE.parent / "ICL-Season2-Moodboard.html"
 
 
 def data_uri(path):
-    mime = {"svg": "image/svg+xml", "jpg": "image/jpeg", "png": "image/png"}[path.suffix[1:]]
+    mime = {"svg": "image/svg+xml", "jpg": "image/jpeg", "png": "image/png", "webp": "image/webp"}[path.suffix[1:]]
     return f"data:{mime};base64," + base64.b64encode(path.read_bytes()).decode()
 
 
@@ -63,7 +63,7 @@ def refs(letter):
 
 
 html = (HERE / "moodboard.src.html").read_text()
-for p in sorted((HERE / "assets").iterdir()):
+for p in sorted((HERE / "assets").iterdir()) + sorted((HERE / "cutouts").iterdir()):
     html = html.replace("{{" + p.stem + "}}", data_uri(p))
 for letter in REFS:
     html = html.replace("{{refs-" + letter + "}}", refs(letter))

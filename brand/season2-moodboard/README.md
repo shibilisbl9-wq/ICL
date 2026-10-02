@@ -7,6 +7,7 @@ It replaces the earlier `brand/design-system/` rules (Montserrat, lowercase head
 - `ICL-Season2-Moodboard.png` – full-page export at 1440px wide, for sharing in chats.
 - `handoff/` – the original design handoff: `DESIGN_SYSTEM.md` (full rules), `tokens/*.css`, poster components (`components/`), specimen cards (`guidelines/`) and the poster studio (`ui_kits/social/`).
 - `src/` – board source. Edit `moodboard.src.html`, then run `python3 src/build.py`.
+  - `cutouts/*.webp` – six AI-generated stand-in players (Higgsfield, nano_banana_flash + background remover). Layout proofs only; replace with real ICL players before posting.
   - `references/r01–r20.jpg` – third-party reference posters grouped by device in `build.py`. Direction only: never trace, crop or post them.
 
 ## The system in one screen
@@ -22,6 +23,6 @@ It replaces the earlier `brand/design-system/` rules (Montserrat, lowercase head
 
 ## Still open
 - Team kit colours are estimated from Season 1 posters. Confirm them against the Season 2 kits.
-- No player cutouts yet. The hero layouts need 2–3 transparent PNGs to test.
+- Player cutouts are AI stand-ins. Shoot real players full body on a plain grey wall with hard light to match.
 - Fonts are Google Fonts stand-ins (OFL).
 - The handoff mentions 22 references. 20 were supplied.

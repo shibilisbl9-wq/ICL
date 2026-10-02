@@ -178,6 +178,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
 .p-grid{inset:0;background-image:var(--grid);background-size:calc(54*var(--u)) calc(54*var(--u));-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 20%,transparent 80%);mask-image:radial-gradient(ellipse 70% 60% at 50% 45%,#000 20%,transparent 80%)}
 .p-num{font-family:var(--f-display);font-weight:900;line-height:.8;letter-spacing:-.04em;color:var(--green)}
 .p-cut{border:calc(3*var(--u)) dashed currentColor;border-radius:999px 999px calc(16*var(--u)) calc(16*var(--u));display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:calc(18*var(--u));letter-spacing:.14em;text-transform:uppercase;opacity:.7;text-align:center}
+.p-player{object-fit:contain;object-position:50% 100%}
 .p-shadow{height:calc(50*var(--u));background:var(--contact)}
 .p-caps{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.82;white-space:nowrap}
 .p-script{font-family:var(--f-script);line-height:1;white-space:nowrap;transform:rotate(-8deg)}
@@ -276,7 +277,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
       <div class="demo d-num">
         <div class="big">07</div>
         <div class="shadow" style="left:38%;right:38%;bottom:6px"></div>
-        <div class="cut solid" style="left:41%;right:41%;top:18%;bottom:16px">Cutout</div>
+        <img src="{{allrounder-walkout-blue}}" alt="" style="position:absolute;left:30%;right:30%;top:8%;bottom:14px;width:40%;height:calc(92% - 14px);object-fit:contain;object-position:50% 100%">
       </div>
       <div class="body"><span class="mono muted">A · Hero device</span><h3>Giant numerals</h3>
         <p>One oversized number tells the story: days to go, a jersey, a stat. It sits behind the cutout so the athlete breaks out of it.</p>
@@ -503,7 +504,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
         <div class="p-meta">SEASON 02<br>UAE · 2026</div>
         <div class="p-num" style="left:50%;translate:-50% 0;top:calc(250*var(--u));font-size:calc(860*var(--u))">02</div>
         <div class="p-shadow" style="left:calc(330*var(--u));right:calc(330*var(--u));top:calc(905*var(--u))"></div>
-        <div class="p-cut" style="left:calc(380*var(--u));right:calc(380*var(--u));top:calc(330*var(--u));height:calc(600*var(--u));background:rgba(242,241,236,.6)">Player<br>cutout</div>
+        <img class="p-player" src="{{batsman-drive-white}}" alt="" style="left:calc(380*var(--u));right:calc(380*var(--u));top:calc(330*var(--u));height:calc(600*var(--u));">
         <div class="p-caps" style="left:calc(72*var(--u));right:calc(72*var(--u));top:calc(990*var(--u));font-size:calc(200*var(--u));text-align:center">WE GO AGAIN</div>
         <div class="p-script" style="left:calc(170*var(--u));top:calc(930*var(--u));font-size:calc(170*var(--u));color:var(--violet)">Second Innings</div>
         <div class="p-foot"><span class="ln"></span><span>DEC 2026</span><span>+</span><span>UAE IMAMA</span><span>+</span><span>DUBAI</span><span class="ln"></span></div>
@@ -520,7 +521,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
         <div class="p-meta">FIRST BALL<br>SAT · 08:00</div>
         <div class="p-num" style="left:calc(40*var(--u));top:calc(200*var(--u));font-size:calc(860*var(--u))">3</div>
         <div class="p-shadow" style="background:var(--contact-night);left:calc(520*var(--u));right:calc(40*var(--u));top:calc(860*var(--u))"></div>
-        <div class="p-cut" style="left:calc(580*var(--u));right:calc(100*var(--u));top:calc(300*var(--u));height:calc(580*var(--u))">Player<br>cutout</div>
+        <img class="p-player" src="{{bowler-delivery-white}}" alt="" style="left:calc(580*var(--u));right:calc(100*var(--u));top:calc(300*var(--u));height:calc(580*var(--u))">
         <div class="p-caps" style="left:calc(72*var(--u));top:calc(930*var(--u));font-size:calc(150*var(--u))">DAYS TO GO</div>
         <div class="p-script" style="left:calc(430*var(--u));top:calc(880*var(--u));font-size:calc(150*var(--u));color:var(--orchid)">Countdown</div>
         <div class="kids" style="left:calc(72*var(--u));right:calc(72*var(--u));top:calc(1110*var(--u));display:flex;justify-content:space-between;font-family:var(--f-display);font-weight:800;font-size:calc(56*var(--u));line-height:1">
@@ -540,9 +541,9 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
         <img class="p-logo" src="{{logo-white}}" alt="">
         <div class="p-meta">M07<br>BT vs DD</div>
         <div class="p-shadow" style="left:calc(40*var(--u));width:calc(480*var(--u));top:calc(860*var(--u))"></div>
-        <div class="p-cut" style="left:calc(100*var(--u));width:calc(360*var(--u));top:calc(320*var(--u));height:calc(560*var(--u))">Captain<br>Team A</div>
+        <img class="p-player" src="{{captain-blue}}" alt="" style="left:calc(100*var(--u));width:calc(360*var(--u));top:calc(320*var(--u));height:calc(560*var(--u))">
         <div class="p-shadow" style="right:calc(40*var(--u));width:calc(480*var(--u));top:calc(860*var(--u))"></div>
-        <div class="p-cut" style="right:calc(100*var(--u));width:calc(360*var(--u));top:calc(320*var(--u));height:calc(560*var(--u));color:var(--ink)">Captain<br>Team B</div>
+        <img class="p-player" src="{{captain-yellow}}" alt="" style="right:calc(100*var(--u));width:calc(360*var(--u));top:calc(320*var(--u));height:calc(560*var(--u));">
         <div class="p-caps" style="left:50%;translate:-50% 0;top:calc(520*var(--u));font-size:calc(120*var(--u))">VS</div>
         <div class="tape" style="left:calc(30*var(--u));right:calc(30*var(--u));top:calc(900*var(--u));height:calc(220*var(--u));transform:rotate(-3deg);font-family:var(--f-display);font-weight:900;font-size:calc(190*var(--u));line-height:1">MATCH DAY</div>
         <div class="p-script" style="left:calc(300*var(--u));top:calc(950*var(--u));font-size:calc(150*var(--u));color:var(--green-bright)">Match Day</div>
@@ -562,7 +563,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
         <img class="p-logo" src="{{logo-ink}}" alt="">
         <div class="p-meta">PLAYER OF THE MATCH<br>M07 · BT vs DD</div>
         <div class="p-shadow" style="left:calc(260*var(--u));right:calc(260*var(--u));top:calc(870*var(--u))"></div>
-        <div class="p-cut" style="left:calc(320*var(--u));right:calc(320*var(--u));top:calc(240*var(--u));height:calc(660*var(--u));background:rgba(242,241,236,.5)">Player<br>cutout</div>
+        <img class="p-player" src="{{batsman-fifty-blue}}" alt="" style="left:calc(320*var(--u));right:calc(320*var(--u));top:calc(240*var(--u));height:calc(660*var(--u));">
         <div class="p-caps" style="left:calc(72*var(--u));top:calc(960*var(--u));font-size:calc(104*var(--u))">LASTNAME</div>
         <div class="p-script" style="left:calc(90*var(--u));top:calc(880*var(--u));font-size:calc(140*var(--u));color:var(--violet)">Firstname</div>
         <div style="right:calc(72*var(--u));top:calc(930*var(--u));text-align:right">
@@ -583,7 +584,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
         <div class="p-num" style="right:calc(30*var(--u));top:calc(200*var(--u));font-size:calc(700*var(--u));color:var(--floodlight);opacity:.95">07</div>
         <div style="left:calc(72*var(--u));top:calc(280*var(--u));width:calc(420*var(--u));height:calc(560*var(--u));border-radius:calc(6*var(--u));overflow:hidden;transform:rotate(-3deg)"><img src="{{action}}" alt="" style="position:static;width:100%;height:100%;object-fit:cover"></div>
         <div class="p-shadow" style="background:var(--contact-night);left:calc(340*var(--u));right:calc(240*var(--u));top:calc(905*var(--u))"></div>
-        <div class="p-cut" style="left:calc(400*var(--u));right:calc(300*var(--u));top:calc(330*var(--u));height:calc(600*var(--u))">Player<br>cutout</div>
+        <img class="p-player" src="{{allrounder-walkout-blue}}" alt="" style="left:calc(400*var(--u));right:calc(300*var(--u));top:calc(330*var(--u));height:calc(600*var(--u))">
         <div class="walk" style="right:calc(72*var(--u));top:calc(740*var(--u));width:calc(500*var(--u));padding:calc(22*var(--u));border-radius:calc(24*var(--u));grid-template-columns:calc(110*var(--u)) minmax(0,1fr);gap:calc(20*var(--u))">
           <div class="cover flow" style="width:calc(110*var(--u));height:calc(110*var(--u));border-radius:calc(12*var(--u));font-size:calc(44*var(--u));display:flex">S2</div>
           <div class="flow"><div style="font-weight:600;font-size:calc(30*var(--u));line-height:1.15">Walkout song</div><div style="font-size:calc(20*var(--u));color:var(--ink-mute)">Artist name</div><div class="bar" style="height:calc(6*var(--u));margin-top:calc(14*var(--u))"><i></i></div></div>
@@ -650,7 +651,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
     </div>
 
   </div>
-  <p class="note" style="margin-top:28px"><b>Dashed shapes are cutout slots.</b> Every hero needs a transparent PNG of a real player standing on the contact shadow. Names, dates, scores and venues above are placeholders.</p>
+  <p class="note" style="margin-top:28px"><b>The players are AI-generated stand-ins</b> (Higgsfield), there to prove the layouts. Swap in real ICL player cut-outs before anything is posted. Names, dates, scores and venues are placeholders too.</p>
 </section>
 
 <!-- 07 RULES -->
@@ -689,7 +690,7 @@ section.s{padding-block:clamp(40px,5vw,64px);border-bottom:1px solid var(--line)
   <div class="label" style="margin-top:40px">Open items before production</div>
   <div class="open">
     <div><b>Kit colours</b>Team hex values are estimated from S1 posters. Confirm with each team's S2 kit.</div>
-    <div><b>Player cutouts</b>Shoot or source 2–3 transparent PNGs to test the hero layouts.</div>
+    <div><b>Player cutouts</b>Shoot real players on a plain grey wall, full body, hard light. The AI stand-ins match that brief.</div>
     <div><b>Fonts</b>Google Fonts stand-ins chosen to match S1. Swap if a licensed family is picked.</div>
     <div><b>References</b>R01–R20 are third-party posters, used for direction only. Never trace, crop or post them.</div>
   </div>
