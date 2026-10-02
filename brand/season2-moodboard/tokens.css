@@ -1,0 +1,45 @@
+/* ICL Season 2 · "Powerplay" poster tokens (moodboard v3, red and blue, final).
+   Canvas: 1080×1350 feed, 1080×1920 story. All sizes below are canvas px. */
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400..700&family=Mr+Dafoe&display=swap");
+
+:root {
+  /* colour */
+  --icl-crease: #F5F3EE;   /* default day ground */
+  --icl-red:    #E92D3C;   /* ball red: the hit colour */
+  --icl-blue:   #1234F9;   /* electric blue: kit, team sheets, numerals */
+  --icl-navy:   #061433;   /* night + signal (duotone) grounds */
+  --icl-ink:    #0B0C14;   /* type and data on light grounds */
+  --icl-white:  #FFFFFF;   /* type on red, blue, navy */
+
+  /* text pairs (WCAG contrast)
+     ink/crease 17.6 · white/blue 7.3 · ink/red 4.6 · white/red 4.3 (24px+)
+     red/navy 4.2 (24px+) · red/crease 3.9 (display only) · red/blue 1.7 NEVER as text */
+
+  /* type */
+  --icl-font-display: "Archivo", "Arial Narrow", Arial, sans-serif;   /* font-stretch: 62%; weight 900; caps */
+  --icl-font-kinetic: "Archivo", Arial, sans-serif;                   /* italic; font-stretch: 125%; weight 800; caps */
+  --icl-font-serif:   "Instrument Serif", Georgia, serif;              /* names, game day, quiet register */
+  --icl-font-script:  "Mr Dafoe", "Brush Script MT", cursive;          /* one word, loud register, -8deg */
+  --icl-font-mono:    "JetBrains Mono", ui-monospace, monospace;       /* weight 500; caps; tracking .14em */
+
+  --icl-size-numeral: 960px;   /* 800–1020 */
+  --icl-size-headline: 180px;  /* 170–340 */
+  --icl-size-name: 176px;      /* 150–180 */
+  --icl-size-script: 160px;    /* 140–180 */
+  --icl-size-team: 104px;      /* 90–110 */
+  --icl-size-tag: 30px;        /* 28–56 */
+  --icl-size-data: 20px;       /* 18–24 */
+
+  /* frame */
+  --icl-margin-side: 64px;
+  --icl-margin-top: 54px;
+  --icl-grid: 54px;            /* graph-paper unit, ink at 8% */
+  --icl-logo-width: 168px;     /* top left, single colour only */
+  --icl-radius-card: 24px;     /* frosted UI cards only; nothing else above 8px */
+  --icl-rule: 2px;             /* footer rule */
+
+  /* signal (duotone) look */
+  --icl-scanline: 5px;         /* 4–6px horizontal scanlines */
+  --icl-channel-split: 12px;   /* max offset: red left, blue right */
+}
