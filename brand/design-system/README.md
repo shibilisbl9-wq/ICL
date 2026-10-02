@@ -1,3 +1,5 @@
+> **Superseded.** The Season 2 direction is now `brand/season2-moodboard/` ("Second Innings"). Don't build new Season 2 work from this file.
+
 The Imama Cricket League (ICL) is a UAE IMAMA cricket event. Season 2 keeps the original identity exactly and adds one line to it: **SEASON 2**, set in the same tracked caps as the **UAE IMAMA** line at the top of the logo. Everything here is built from that logo: its two gradients, its tracked caps, its lowercase geometric wordmark, and the ball's speed-line trail.
 
 ## Voice

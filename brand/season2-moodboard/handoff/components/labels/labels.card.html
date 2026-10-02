@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x330" name="Labels" subtitle="CrosshairRule, RoleBadge, HandCircle, TeamTag, StatBlock" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../lib/ds-loader.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:24px;background:#FFFFFF;color:var(--text-primary);font-family:var(--font-sans)}</style>
+<div id="root"></div>
+<script type="text/babel">
+window.ICL_READY.then(()=>{
+const { Numeral, ScriptCaps, TornTape, Ribbon, PlayerCutout, CrosshairRule, RoleBadge, HandCircle, TeamTag, StatBlock, WalkoutCard, JerseyTile, PosterFrame, PosterHeader } = window.ICL;
+const L = ({children}) => <div style={{fontFamily:"var(--font-mono)",fontSize:11,letterSpacing:".1em",color:"var(--text-muted)",marginTop:8}}>{children}</div>;
+function App(){return(
+<div style={{display:"flex",flexDirection:"column",gap:22}}>
+ <div><CrosshairRule size={13} items={["SAT · DEC 12","09:00","GROUND 01"]}/><L>CROSSHAIRRULE</L></div>
+ <div style={{display:"flex",gap:40,alignItems:"flex-start"}}>
+  <div><div style={{display:"flex",gap:8}}><RoleBadge role="BAT"/><RoleBadge role="BWL"/><RoleBadge role="AR" active/><RoleBadge role="WK"/></div><L>ROLEBADGE</L></div>
+  <div style={{paddingTop:6}}><HandCircle stroke={4} pad={10}><span style={{fontFamily:"var(--font-display)",fontWeight:900,fontSize:44,lineHeight:1}}>FINAL</span></HandCircle><div style={{marginTop:12}}><L>HANDCIRCLE</L></div></div>
+  <div style={{marginLeft:"auto"}}><StatBlock value="64*" detail="31 balls · 4×6" size={64} align="right"/><L>STATBLOCK</L></div>
+ </div>
+ <div><div style={{display:"flex",flexWrap:"wrap",gap:16,alignItems:"center"}}><TeamTag name="Blue Titans" color="var(--team-blue-titans)" size={28}/><TeamTag name="Desert Devils" color="var(--team-desert-devils)" size={28} side="right"/><TeamTag name="First Legends" color="var(--team-first-legends)" size={20} pill/></div><L>TEAMTAG · LEFT / RIGHT / PILL</L></div>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+});
+</script>

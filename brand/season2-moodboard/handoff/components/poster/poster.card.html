@@ -1,0 +1,22 @@
+<!-- @dsCard group="Components" viewport="700x380" name="Poster frame" subtitle="Grounds × textures, with PosterHeader" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../lib/ds-loader.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:24px;background:#F2F1EC;color:var(--text-primary);font-family:var(--font-sans)}</style>
+<div id="root"></div>
+<script type="text/babel">
+window.ICL_READY.then(()=>{
+const { Numeral, ScriptCaps, TornTape, Ribbon, PlayerCutout, CrosshairRule, RoleBadge, HandCircle, TeamTag, StatBlock, WalkoutCard, JerseyTile, PosterFrame, PosterHeader } = window.ICL;
+const L = ({children}) => <div style={{fontFamily:"var(--font-mono)",fontSize:11,letterSpacing:".1em",color:"var(--text-muted)",marginTop:8}}>{children}</div>;
+function App(){
+ const g=[["white","grid","icl-logo-ink"],["floodlight","none","icl-logo-ink"],["night","halftone","icl-logo-white"],["quiet","none","icl-logo-green"],["gradient","grid","icl-logo-white"]];
+ return(<div style={{display:"flex",gap:12}}>{g.map(([gr,t,l])=>(
+  <div key={gr}><PosterFrame ground={gr} texture={t} displayWidth={122} style={{outline:"1px solid var(--border-hairline)"}}>
+   <PosterHeader logoSrc={"../../assets/"+l+".png"} meta={["SEASON 02"]} logoWidth={200}/>
+   <CrosshairRule items={["ICL","S02"]} style={{position:"absolute",left:72,right:72,bottom:64}} size={30}/>
+  </PosterFrame><L>{gr.toUpperCase()}{t!=="none"?" · "+t.toUpperCase():""}</L></div>))}</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+});
+</script>

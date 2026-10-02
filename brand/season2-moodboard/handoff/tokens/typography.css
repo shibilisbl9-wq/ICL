@@ -1,0 +1,35 @@
+:root{
+  --font-display:'Big Shoulders Display','Big Shoulders',sans-serif;
+  --font-script:'Mrs Saint Delafield',cursive;
+  --font-sans:'Outfit',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+
+  --weight-display:900;
+  --weight-display-sub:800;
+  --leading-display:.82;
+  --leading-numeral:.8;
+  --tracking-numeral:-.04em;
+  --tracking-mono:.14em;
+  --script-angle:-8deg;
+
+  /* Poster scale — sizes on a 1080 × 1350 canvas */
+  --poster-numeral:860px;
+  --poster-h1:250px;
+  --poster-script:170px;
+  --poster-h2:150px;
+  --poster-name:104px;
+  --poster-h3:76px;
+  --poster-team:38px;
+  --poster-body:32px;
+  --poster-mono:20px;
+  --poster-mono-sm:18px;
+
+  /* Screen scale — boards, docs, specimens */
+  --text-hero:300px;
+  --text-section:88px;
+  --text-title:48px;
+  --text-lead:22px;
+  --text-body:16px;
+  --text-label:13px;
+  --text-caption:11px;
+}

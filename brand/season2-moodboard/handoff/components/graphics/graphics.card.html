@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Poster devices" subtitle="Numeral, Script×Caps, TornTape, Ribbon, PlayerCutout" -->
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../lib/ds-loader.js"></script>
+<style>*{box-sizing:border-box}body{margin:0;padding:24px;background:#FFFFFF;color:var(--text-primary);font-family:var(--font-sans)}</style>
+<div id="root"></div>
+<script type="text/babel">
+window.ICL_READY.then(()=>{
+const { Numeral, ScriptCaps, TornTape, Ribbon, PlayerCutout, CrosshairRule, RoleBadge, HandCircle, TeamTag, StatBlock, WalkoutCard, JerseyTile, PosterFrame, PosterHeader } = window.ICL;
+const L = ({children}) => <div style={{fontFamily:"var(--font-mono)",fontSize:11,letterSpacing:".1em",color:"var(--text-muted)",marginTop:8}}>{children}</div>;
+function App(){return(
+<div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:20}}>
+ <div><div style={{position:"relative",height:220,overflow:"hidden",border:"1px solid var(--border-hairline)",borderRadius:6}}>
+   <div style={{position:"absolute",inset:0,display:"flex",justifyContent:"center"}}><Numeral size={250} style={{marginTop:10,letterSpacing:0}}>07</Numeral></div>
+   <PlayerCutout width={90} height={170} label="" style={{position:"absolute",left:"calc(50% - 45px)",top:30}}/></div><L>NUMERAL + PLAYERCUTOUT</L></div>
+ <div><div style={{height:220,display:"flex",alignItems:"center",justifyContent:"center",border:"1px solid var(--border-hairline)",borderRadius:6,overflow:"hidden"}}>
+   <ScriptCaps caps={"MATCH\nDAY"} script="Match Day" capsSize={96} scriptSize={74} scriptColor="var(--icl-green)" align="center"/></div><L>SCRIPTCAPS</L></div>
+ <div><div style={{height:220,background:"var(--surface-night)",borderRadius:6,display:"flex",flexDirection:"column",justifyContent:"center",gap:24,padding:"0 10px",overflow:"hidden"}}>
+   <TornTape height={70}>MATCH DAY</TornTape><TornTape mono height={40} rotate={-5} color="var(--icl-orchid)">SECOND INNINGS · SECOND INNINGS</TornTape></div><L>TORNTAPE · DISPLAY / MONO</L></div>
+ <div><div style={{position:"relative",height:220,border:"1px solid var(--border-hairline)",borderRadius:6,overflow:"hidden"}}>
+   <Ribbon size={460} width={70} style={{position:"absolute",left:-90,top:40}}/>
+   <Ribbon variant="streak" size={260} width={60} style={{position:"absolute",left:10,top:20}} colors={["var(--icl-green)","transparent","var(--icl-violet)","transparent","var(--team-blue-titans)","transparent","var(--icl-orchid)"]}/></div><L>RIBBON · ARC / STREAK</L></div>
+</div>)}
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+});
+</script>

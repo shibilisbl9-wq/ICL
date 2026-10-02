@@ -1,0 +1,47 @@
+:root{
+  /* Base — brand pair carried from Season 1 */
+  --icl-green:#19C571;
+  --icl-green-bright:#1ED67C;
+  --icl-green-deep:#0E8A4E;
+  --icl-violet:#5B2A92;
+  --icl-orchid:#C86AE8;
+  /* Base — Season 2 additions */
+  --icl-floodlight:#F2F1EC;
+  --icl-white:#FFFFFF;
+  --icl-flare:#FF5B24;
+  /* Night grounds */
+  --icl-pitch:#0A2A1C;
+  --icl-pitch-deep:#07130D;
+  /* Neutrals */
+  --icl-ink:#0E100D;
+  --icl-ink-soft:#33352F;
+  --icl-ink-mute:#55574F;
+  --icl-line:#D8D6CE;
+  --icl-line-strong:#CFCDC4;
+  --icl-ghost:#E4E2DA;
+  /* Team kits — placeholders, confirm against Season 2 kits */
+  --team-blue-titans:#1F6FE5;
+  --team-enhance-royals:#2BCB86;
+  --team-first-legends:#D63441;
+  --team-desert-devils:#E9C23A;
+  --team-bizpoint-strikers:#A54FD6;
+  --team-nahda-super-kings:#E39A2A;
+  --team-sky:#8DB6F5;
+
+  /* Semantic */
+  --surface-ground:var(--icl-floodlight);
+  --surface-paper:var(--icl-white);
+  --surface-night:var(--icl-pitch);
+  --surface-quiet:var(--icl-pitch-deep);
+  --text-primary:var(--icl-ink);
+  --text-secondary:var(--icl-ink-soft);
+  --text-muted:var(--icl-ink-mute);
+  --text-on-dark:var(--icl-floodlight);
+  --accent-hit:var(--icl-green);
+  --accent-script-light:var(--icl-violet);
+  --accent-script-dark:var(--icl-orchid);
+  --accent-highlight:var(--icl-flare);
+  --accent-tape:var(--icl-violet);
+  --border-hairline:var(--icl-line);
+  --gradient-collage:linear-gradient(165deg,#1ED67C 0%,#0E8A4E 50%,#0A2A1C 100%);
+}
