@@ -1,14 +1,15 @@
 <title>ICL Season 2 Moodboard</title>
 <style>
 {{fontfaces}}
-/* Layout: one long campaign board on Crease white. The cover is the 21:9 key visual with the title set in its empty right third;
-   one Ink wall carries the imagery; posters are drawn live at 1080×1350 and scaled by container width.
-   Single theme on purpose: this is a brand board and the colours are the content, so it never inverts. */
+/* Layout: one long campaign board under floodlights. Navy page, a Deep wall for the imagery, the 21:9 key visual as the cover
+   with the title set in its empty right third; posters are drawn live at 1080×1350 and scaled by container width.
+   Single dark theme on purpose: this is a brand board for a dark palette and the colours are the content, so it never inverts. */
 :root{
-  color-scheme:light;
-  --crease:#F5F3EE; --crease-2:#EBE9E4; --line:#D6D4D0;
-  --ink:#0B0C14; --ink-2:#33343E; --mute:#64656F;
-  --red:#E92D3C; --blue:#1234F9; --navy:#061433; --white:#FFFFFF;
+  color-scheme:dark;
+  --navy:#061433; --deep:#030916; --raised:#0B1C45;
+  --green:#1FCB62; --blue:#1234F9; --chalk:#EEF2F7;
+  --fg:#EEF2F7; --fg-2:#B6C1D6; --mute:#8592AE;
+  --line:#1C2C52; --line-2:#33467A;
   --f-display:'Archivo','Arial Narrow',Arial,sans-serif;
   --f-serif:'Instrument Serif',Georgia,'Times New Roman',serif;
   --f-mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
@@ -16,13 +17,13 @@
   --gutter:clamp(16px,4vw,56px);
 }
 *{box-sizing:border-box}
-html{background:var(--crease)}
-body{background:var(--crease);color:var(--ink);font-family:var(--f-display);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{background:var(--navy)}
+body{background:var(--navy);color:var(--fg);font-family:var(--f-display);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{display:block;max-width:100%}
-h1,h2,h3,p,ul,figure{margin:0}
+h1,h2,h3,h4,p,ul,figure{margin:0}
 ul{padding:0;list-style:none}
 button{font:inherit;color:inherit}
-:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
 
 /* type roles */
 .disp{font-family:var(--f-display);font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.84;letter-spacing:-.005em;text-wrap:balance}
@@ -30,35 +31,36 @@ button{font:inherit;color:inherit}
 .serif{font-family:var(--f-serif);font-weight:400;letter-spacing:-.01em}
 .mono{font-family:var(--f-mono);font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;line-height:1.5}
 .num{font-variant-numeric:tabular-nums}
+.hot{color:var(--green)}
 
 .wrap{max-width:1440px;margin-inline:auto;padding-inline:var(--gutter)}
 .sec{padding-block:clamp(64px,8vw,120px)}
 .sh{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:16px 48px;align-items:end;margin-bottom:clamp(32px,4vw,56px)}
 .sh .mono{grid-column:1/-1;color:var(--mute)}
 .sh h2{font-size:clamp(64px,10vw,152px)}
-.sh .lede{max-width:46ch;color:var(--ink-2);font-size:17px}
+.sh .lede{max-width:46ch;color:var(--fg-2);font-size:17px}
 @media (max-width:820px){.sh{grid-template-columns:minmax(0,1fr)}}
 
 /* top bar */
-.top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding-block:14px}
+.top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;padding-block:14px;color:var(--fg-2)}
 .top span:last-child{color:var(--mute)}
 
 /* cover */
-.cover{position:relative;max-width:1920px;margin-inline:auto;border-block:1px solid var(--ink)}
+.cover{position:relative;max-width:1920px;margin-inline:auto;border-block:1px solid var(--line-2)}
 .cover .kv img{width:100%;height:auto}
 .cover-copy{display:flex;flex-direction:column;gap:20px;padding:28px var(--gutter) 40px}
 .cover-logo{width:clamp(96px,8vw,136px)}
+.cover-copy .mono{color:var(--fg-2)}
 .cover h1{font-size:clamp(104px,11.2vw,216px);line-height:.8}
 .cover h1 span{display:block}
-.cover h1 .hot{color:var(--red)}
-.cover .tag{font-size:clamp(22px,1.9vw,30px);line-height:1.15;max-width:19ch}
-.cover .tag em{color:var(--blue)}
+.cover .tag{font-size:clamp(22px,1.9vw,30px);line-height:1.15;max-width:19ch;color:var(--fg)}
+.cover .tag em{color:var(--green)}
 @media (min-width:1100px){
   .cover-copy{position:absolute;top:0;bottom:0;right:0;width:35%;padding:clamp(28px,2.6vw,44px) var(--gutter) clamp(28px,2.6vw,44px) 0;justify-content:space-between}
 }
 
 /* ticker */
-.ticker{background:var(--red);color:var(--ink);overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--ink)}
+.ticker{background:var(--green);color:var(--deep);overflow:hidden;white-space:nowrap;border-bottom:1px solid var(--deep)}
 .ticker-track{display:inline-flex;animation:tick 48s linear infinite}
 .ticker span{font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:clamp(30px,3.4vw,48px);text-transform:uppercase;line-height:1;padding:12px 0 10px}
 .ticker i{font-style:normal;font-family:var(--f-mono);font-weight:500;font-size:.5em;padding-inline:.9em;vertical-align:middle}
@@ -68,38 +70,36 @@ button{font:inherit;color:inherit}
 /* thesis */
 .thesis-grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:32px 64px;align-items:start}
 .statement{font-size:clamp(32px,3.7vw,58px);line-height:1.04;text-wrap:balance}
-.statement em{color:var(--red)}
-.source-note{display:grid;gap:12px;border-top:2px solid var(--ink);padding-top:16px;color:var(--ink-2)}
-.source-note strong{color:var(--ink)}
-.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin-top:clamp(48px,6vw,88px);border-top:1px solid var(--ink)}
+.statement em{color:var(--green)}
+.source-note{display:grid;gap:12px;border-top:2px solid var(--fg);padding-top:16px;color:var(--fg-2)}
+.source-note .mono{color:var(--mute)}
+.source-note strong{color:var(--fg)}
+.pillars{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:clamp(48px,6vw,88px);border-top:1px solid var(--line-2)}
 .pillars li{padding:20px 24px 8px 0;display:grid;gap:10px;align-content:start}
 .pillars li + li{padding-left:24px;border-left:1px solid var(--line)}
 .pillars h3{font-size:clamp(40px,3.6vw,56px)}
-.pillars h3 span{color:var(--blue)}
-.pillars p{color:var(--ink-2);font-size:15px;max-width:30ch}
+.pillars h3 span{color:var(--green)}
+.pillars p{color:var(--fg-2);font-size:15px;max-width:30ch}
 @media (max-width:980px){.thesis-grid{grid-template-columns:minmax(0,1fr)}.pillars{grid-template-columns:repeat(2,minmax(0,1fr))}.pillars li:nth-child(3){padding-left:0;border-left:0}}
 @media (max-width:520px){.pillars{grid-template-columns:minmax(0,1fr)}.pillars li + li{padding-left:0;border-left:0;border-top:1px solid var(--line)}}
 
 /* wall */
-.wall{background:var(--ink);color:var(--crease)}
-.wall .sh .mono{color:var(--line)}
-.wall .sh .lede{color:var(--line)}
-.wall .sh h2 .hot{color:var(--red)}
+.wall{background:var(--deep)}
 .masonry{columns:4 150px;column-gap:14px}
 .tile{break-inside:avoid;margin-bottom:14px;display:grid;gap:8px}
 .zoom{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
 .zoom img{width:100%;height:auto;transition:transform .3s ease}
 .zoom:hover img{transform:scale(1.015)}
-.tile figcaption{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--line)}
-.tile figcaption b{font-weight:500;color:var(--red)}
+.tile figcaption{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.tile figcaption b{font-weight:500;color:var(--green)}
 @media (prefers-reduced-motion:reduce){.zoom img{transition:none}}
 
 /* sources */
 .refs{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:10px}
 .ref{display:grid;gap:6px}
-.ref img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--crease-2)}
+.ref img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--raised)}
 .ref figcaption{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between;gap:4px}
-.ref figcaption b{color:var(--ink);font-weight:500}
+.ref figcaption b{color:var(--fg);font-weight:500}
 @media (max-width:900px){.refs{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media (max-width:480px){.refs{grid-template-columns:repeat(4,minmax(0,1fr))}.ref figcaption span{display:none}}
 .legend{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:20px;color:var(--mute)}
@@ -107,81 +107,85 @@ button{font:inherit;color:inherit}
 .palette-refs figure{display:grid;gap:8px}
 .palette-refs img{width:100%;height:auto}
 .palette-refs figcaption{display:flex;justify-content:space-between;gap:12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.palette-refs figcaption b{font-weight:500;color:var(--red)}
+.palette-refs figcaption b{font-weight:500;color:var(--green)}
 @media (max-width:700px){.palette-refs{grid-template-columns:repeat(2,minmax(0,1fr))}.palette-refs figure:first-child{grid-column:1/-1}}
 
 /* colour */
-.swatches{display:grid;grid-template-columns:1.3fr 1.5fr 1.5fr 1fr .8fr;gap:10px}
-.sh h2 .vs{font-style:italic;font-stretch:125%;font-weight:800;font-size:.42em;vertical-align:.55em;color:var(--mute);padding-inline:.15em}
+.swatches{display:grid;grid-template-columns:1.5fr 1fr 1.5fr 1.2fr .8fr;gap:10px}
 .sw{min-height:320px;padding:18px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
 .sw h3{font-size:clamp(44px,4vw,60px)}
 .sw p{font-size:14px;line-height:1.45;max-width:30ch}
 .sw .mono{font-size:11px}
-.sw-crease{background:var(--crease);color:var(--ink);border:1px solid var(--ink)}
-.sw-ink{background:var(--ink);color:var(--crease)}
-.sw-red{background:var(--red);color:var(--ink)}
-.sw-blue{background:var(--blue);color:var(--white)}
-.sw-navy{background:var(--navy);color:var(--white)}
-@media (max-width:1100px){.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.sw-crease{grid-column:1/-1}.sw{min-height:220px}}
+.sw-navy{background:var(--navy);color:var(--chalk);border:1px solid var(--line-2)}
+.sw-deep{background:var(--deep);color:var(--chalk);border:1px solid var(--line)}
+.sw-green{background:var(--green);color:var(--deep)}
+.sw-blue{background:var(--blue);color:var(--chalk)}
+.sw-chalk{background:var(--chalk);color:var(--deep)}
+@media (max-width:1100px){.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.sw-navy{grid-column:1/-1}.sw{min-height:220px}}
 @media (max-width:520px){.swatches{grid-template-columns:minmax(0,1fr)}}
 .colour-detail{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px 64px;margin-top:48px}
 @media (max-width:980px){.colour-detail{grid-template-columns:minmax(0,1fr)}}
 .mixes{display:grid;gap:18px}
 .mix{display:grid;gap:8px}
-.bar{display:flex;height:56px;border:1px solid var(--ink)}
+.mix .mono{color:var(--mute)}
+.bar{display:flex;height:56px;border:1px solid var(--line-2)}
 .bar i{flex:var(--w);display:flex;align-items:flex-end;padding:6px 8px;font-style:normal;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;overflow:hidden}
-.c-crease{background:var(--crease);color:var(--ink)}
-.c-ink{background:var(--ink);color:var(--crease)}
-.c-red{background:var(--red);color:var(--ink)}
-.c-blue{background:var(--blue);color:var(--white)}
-.c-navy{background:var(--navy);color:var(--white)}
+.c-navy{background:var(--navy);color:var(--chalk)}
+.c-deep{background:var(--deep);color:var(--chalk)}
+.c-green{background:var(--green);color:var(--deep)}
+.c-blue{background:var(--blue);color:var(--chalk)}
+.c-chalk{background:var(--chalk);color:var(--deep)}
 .pairs{width:100%;border-collapse:collapse;font-size:14px}
 .pairs th,.pairs td{text-align:left;padding:10px 12px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
 .pairs th{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.pairs td{color:var(--fg-2)}
+.pairs td:first-child{color:var(--fg)}
 .pairs td:nth-child(2){font-family:var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-.chip{display:inline-flex;align-items:center;justify-content:center;width:44px;height:28px;font-weight:800;font-size:13px;margin-right:10px;vertical-align:middle}
+.chip{display:inline-flex;align-items:center;justify-content:center;width:44px;height:28px;font-weight:800;font-size:13px;margin-right:10px;vertical-align:middle;border:1px solid var(--line-2)}
 .logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:48px}
 .logos figure{display:grid;gap:8px;min-width:0}
-.logos .plate{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden}
+.logos .plate{aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;min-width:0;overflow:hidden;border:1px solid var(--line)}
 .logos .plate img{width:58%;height:auto}
 .logos figcaption{color:var(--mute)}
 @media (max-width:700px){.logos{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.note{margin-top:20px;max-width:72ch;color:var(--ink-2)}
+.note{margin-top:20px;max-width:72ch;color:var(--fg-2)}
 
 /* type */
-.specimens{border-top:1px solid var(--ink)}
+.specimens{border-top:1px solid var(--line-2)}
 .spec{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,3.2fr);gap:16px 40px;padding-block:28px;border-bottom:1px solid var(--line);align-items:center}
 .spec-meta{display:grid;gap:6px;align-content:start}
+.spec-meta .mono{color:var(--green)}
 .spec-meta h3{font-size:15px;font-weight:700}
-.spec-meta p{font-size:14px;color:var(--ink-2)}
+.spec-meta p{font-size:14px;color:var(--fg-2)}
 .spec-sample{min-width:0;overflow-wrap:anywhere}
 .s-display{font-size:clamp(88px,14vw,220px)}
-.s-digits{font-size:clamp(56px,8vw,120px);color:var(--blue);letter-spacing:-.02em}
-.s-kin{font-size:clamp(34px,5vw,72px);color:var(--red);line-height:1}
+.s-digits{font-size:clamp(56px,8vw,120px);color:var(--green);letter-spacing:-.02em}
+.s-kin{font-size:clamp(34px,5vw,72px);color:var(--green);line-height:1}
 .s-serif{font-size:clamp(56px,7.5vw,120px);line-height:.95}
-.s-serif em{color:var(--blue)}
+.s-serif em{color:var(--green)}
 .s-mono{font-family:var(--f-mono);font-size:clamp(16px,1.8vw,24px);letter-spacing:.08em;text-transform:uppercase}
-.s-mono span{color:var(--red)}
+.s-mono span{color:var(--green)}
 .scriptcaps{position:relative;display:inline-block;padding-block:8px}
-.scriptcaps .disp{font-size:clamp(64px,9vw,140px);color:var(--ink)}
-.scriptcaps .scr{position:absolute;left:18%;top:42%;font-family:var(--f-script);font-size:clamp(76px,10vw,160px);color:var(--red);transform:rotate(-8deg);line-height:1;white-space:nowrap;text-shadow:0 0 0 var(--red)}
+.scriptcaps .disp{font-size:clamp(64px,9vw,140px)}
+.scriptcaps .scr{position:absolute;left:18%;top:42%;font-family:var(--f-script);font-size:clamp(76px,10vw,160px);color:var(--green);transform:rotate(-8deg);line-height:1;white-space:nowrap}
 @media (max-width:760px){.spec{grid-template-columns:minmax(0,1fr)}}
 .scale-wrap{overflow-x:auto;margin-top:40px}
 .scale{width:100%;min-width:640px;border-collapse:collapse;font-size:14px}
-.scale th,.scale td{text-align:left;padding:12px 14px 12px 0;border-bottom:1px solid var(--line)}
+.scale th,.scale td{text-align:left;padding:12px 14px 12px 0;border-bottom:1px solid var(--line);color:var(--fg-2)}
+.scale td:first-child{color:var(--fg)}
 .scale th{font-family:var(--f-mono);font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
 .scale td.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
 
 /* devices */
-.dev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:28px 48px;padding-block:44px;border-top:1px solid var(--ink)}
-.dev:last-child{border-bottom:1px solid var(--ink)}
+.dev{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr);gap:28px 48px;padding-block:44px;border-top:1px solid var(--line-2)}
+.dev:last-child{border-bottom:1px solid var(--line-2)}
 .dev-text{display:grid;gap:16px;align-content:start}
-.dev-text .mono{color:var(--red)}
+.dev-text .mono{color:var(--green)}
 .dev-text h3{font-size:clamp(52px,5.4vw,84px)}
-.dev-text > p{color:var(--ink-2);max-width:44ch}
+.dev-text > p{color:var(--fg-2);max-width:44ch}
 .dev-rules{display:grid;gap:8px;font-size:14px}
-.dev-rules li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px;color:var(--ink-2)}
-.dev-rules li::before{content:"+";font-family:var(--f-mono);color:var(--ink)}
+.dev-rules li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:6px;color:var(--fg-2)}
+.dev-rules li::before{content:"+";font-family:var(--f-mono);color:var(--green)}
 .dev-refs{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
 .dev-refs figure{width:64px;display:grid;gap:4px}
 .dev-refs img{width:64px;aspect-ratio:4/5;object-fit:cover}
@@ -195,112 +199,112 @@ button{font:inherit;color:inherit}
 @media (max-width:520px){.dev-imgs.n3{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 /* posters drawn live: 1080×1350 canvas, --u = one canvas pixel */
-.templates{background:var(--crease-2);border-block:1px solid var(--ink)}
+.templates{background:var(--raised);border-block:1px solid var(--line-2)}
 .posters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
 @media (max-width:1200px){.posters{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:620px){.posters{grid-template-columns:minmax(0,1fr)}}
 .poster-fig{display:grid;gap:10px}
 .poster-fig figcaption{display:grid;gap:2px}
 .poster-fig figcaption b{font-size:18px;font-weight:700}
-.poster-fig figcaption span{font-size:14px;color:var(--ink-2)}
-.poster{container-type:inline-size;position:relative;width:100%;max-width:100%;aspect-ratio:4/5;overflow:hidden;box-shadow:0 1px 0 var(--ink)}
+.poster-fig figcaption span{font-size:14px;color:var(--fg-2)}
+.poster{container-type:inline-size;position:relative;width:100%;max-width:100%;aspect-ratio:4/5;overflow:hidden}
 .cv{position:absolute;inset:0;--u:calc(100cqw / 1080)}
 .cv > *{position:absolute;margin:0}
 .p-logo{left:calc(64*var(--u));top:calc(54*var(--u));width:calc(168*var(--u))}
 .p-meta{right:calc(64*var(--u));top:calc(70*var(--u));font-family:var(--f-mono);font-weight:500;font-size:calc(20*var(--u));letter-spacing:.14em;text-transform:uppercase;text-align:right;line-height:1.5}
 .p-foot{left:calc(64*var(--u));right:calc(64*var(--u));bottom:calc(50*var(--u));display:flex;justify-content:space-between;gap:calc(12*var(--u));border-top:calc(2*var(--u)) solid currentColor;padding-top:calc(16*var(--u));font-family:var(--f-mono);font-weight:500;font-size:calc(19*var(--u));letter-spacing:.14em;text-transform:uppercase;white-space:nowrap}
-.p-shadow{background:radial-gradient(closest-side,rgba(12,13,18,.42),rgba(12,13,18,0))}
+.p-shadow{background:radial-gradient(closest-side,rgba(3,9,22,.7),rgba(3,9,22,0))}
+.p-glow{background:radial-gradient(closest-side,var(--glow),rgba(6,20,51,0))}
 /* A · announcement */
-.pA .cv{background:var(--crease);color:var(--ink)}
-.pA-num{left:0;right:0;top:calc(196*var(--u));text-align:center;font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(960*var(--u));line-height:.8;letter-spacing:-.045em;color:var(--red)}
+.pA .cv{background:var(--navy);color:var(--chalk)}
+.pA .p-glow{--glow:rgba(31,203,98,.22);left:calc(40*var(--u));top:calc(160*var(--u));width:calc(1000*var(--u));height:calc(900*var(--u))}
+.pA-num{left:0;right:0;top:calc(196*var(--u));text-align:center;font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(960*var(--u));line-height:.8;letter-spacing:-.045em;color:var(--green)}
 .pA-rib{inset:0;width:100%;height:100%}
 .pA-cut{height:calc(850*var(--u));left:calc(396*var(--u));top:calc(196*var(--u))}
 .pA .p-shadow{left:calc(300*var(--u));top:calc(1018*var(--u));width:calc(460*var(--u));height:calc(60*var(--u))}
-.pA-kin{left:calc(64*var(--u));top:calc(1062*var(--u));font-family:var(--f-display);font-style:italic;font-stretch:125%;font-weight:800;font-size:calc(30*var(--u));letter-spacing:.02em;text-transform:uppercase;color:var(--blue)}
+.pA-kin{left:calc(64*var(--u));top:calc(1062*var(--u));font-family:var(--f-display);font-style:italic;font-stretch:125%;font-weight:800;font-size:calc(30*var(--u));letter-spacing:.02em;text-transform:uppercase;color:var(--green)}
 .pA-head{left:calc(60*var(--u));bottom:calc(112*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(178*var(--u));line-height:.82;text-transform:uppercase;letter-spacing:-.005em}
 /* B · match day */
-.pB .cv{background:var(--red) repeating-linear-gradient(0deg,rgba(11,12,20,.07) 0 calc(2*var(--u)),rgba(11,12,20,0) 0 calc(9*var(--u)));color:var(--white)}
-.pB-head{left:calc(52*var(--u));top:calc(236*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(338*var(--u));line-height:.8;text-transform:uppercase;color:var(--white);letter-spacing:-.01em}
-.pB-streak{height:calc(var(--h)*var(--u));width:calc(var(--w)*var(--u));left:calc(var(--x)*var(--u));top:calc(var(--y)*var(--u));border-radius:calc(40*var(--u));background:linear-gradient(90deg,rgba(255,255,255,0),var(--c) 70%)}
+.pB .cv{background:var(--green) repeating-linear-gradient(0deg,rgba(3,9,22,.08) 0 calc(2*var(--u)),rgba(3,9,22,0) 0 calc(9*var(--u)));color:var(--deep)}
+.pB-head{left:calc(52*var(--u));top:calc(236*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(338*var(--u));line-height:.8;text-transform:uppercase;color:var(--deep);letter-spacing:-.01em}
+.pB-streak{height:calc(var(--h)*var(--u));width:calc(var(--w)*var(--u));left:calc(var(--x)*var(--u));top:calc(var(--y)*var(--u));border-radius:calc(40*var(--u));background:linear-gradient(90deg,rgba(31,203,98,0),var(--c) 70%)}
 .pB-cut{height:calc(1030*var(--u));right:calc(26*var(--u));top:calc(150*var(--u))}
 .pB .p-shadow{right:calc(30*var(--u));top:calc(1150*var(--u));width:calc(380*var(--u));height:calc(46*var(--u))}
-.pB-teams{left:calc(56*var(--u));bottom:calc(126*var(--u));display:flex;align-items:baseline;gap:calc(22*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(104*var(--u));line-height:.9;text-transform:uppercase;color:var(--white)}
-.pB-teams em{font-style:italic;font-stretch:125%;font-weight:800;font-size:.42em;color:var(--ink)}
+.pB-teams{left:calc(56*var(--u));bottom:calc(126*var(--u));display:flex;align-items:baseline;gap:calc(22*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(104*var(--u));line-height:.9;text-transform:uppercase;color:var(--deep)}
+.pB-teams em{font-style:italic;font-stretch:125%;font-weight:800;font-size:.42em;color:var(--blue)}
 /* C · player feature */
-.pC .cv{background:var(--navy);color:var(--white)}
-.pC-dots{inset:0;background-image:radial-gradient(circle,var(--blue) calc(2.6*var(--u)),rgba(18,52,249,0) calc(3.2*var(--u)));background-size:calc(15*var(--u)) calc(15*var(--u));opacity:.9;-webkit-mask-image:radial-gradient(ellipse 70% 60% at 72% 34%,#000 0%,rgba(0,0,0,0) 72%);mask-image:radial-gradient(ellipse 70% 60% at 72% 34%,#000 0%,rgba(0,0,0,0) 72%)}
-.pC-num{right:calc(-24*var(--u));top:calc(150*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(860*var(--u));line-height:.8;letter-spacing:-.04em;color:rgba(233,45,60,0);-webkit-text-stroke:calc(4*var(--u)) var(--red)}
+.pC .cv{background:var(--deep);color:var(--chalk)}
+.pC .p-glow{--glow:rgba(18,52,249,.45);left:calc(160*var(--u));top:calc(120*var(--u));width:calc(900*var(--u));height:calc(900*var(--u))}
+.pC-dots{inset:0;background-image:radial-gradient(circle,var(--blue) calc(2.6*var(--u)),rgba(18,52,249,0) calc(3.2*var(--u)));background-size:calc(15*var(--u)) calc(15*var(--u));-webkit-mask-image:radial-gradient(ellipse 70% 60% at 72% 34%,#000 0%,rgba(0,0,0,0) 72%);mask-image:radial-gradient(ellipse 70% 60% at 72% 34%,#000 0%,rgba(0,0,0,0) 72%)}
+.pC-num{right:calc(-24*var(--u));top:calc(150*var(--u));font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(860*var(--u));line-height:.8;letter-spacing:-.04em;color:rgba(31,203,98,0);-webkit-text-stroke:calc(4*var(--u)) var(--green)}
 .pC-cut{height:calc(1010*var(--u));left:calc(318*var(--u));top:calc(176*var(--u))}
-.pC-fade{left:0;right:0;bottom:0;height:calc(560*var(--u));background:linear-gradient(rgba(6,20,51,0),var(--navy) 64%)}
-.pC-role{left:calc(64*var(--u));top:calc(330*var(--u));width:calc(104*var(--u));height:calc(104*var(--u));border:calc(3*var(--u)) solid var(--white);border-radius:50%;display:grid;place-items:center;font-family:var(--f-mono);font-weight:500;font-size:calc(30*var(--u));letter-spacing:.08em}
+.pC-fade{left:0;right:0;bottom:0;height:calc(560*var(--u));background:linear-gradient(rgba(3,9,22,0),var(--deep) 64%)}
+.pC-role{left:calc(64*var(--u));top:calc(330*var(--u));width:calc(104*var(--u));height:calc(104*var(--u));border:calc(3*var(--u)) solid var(--green);color:var(--green);border-radius:50%;display:grid;place-items:center;font-family:var(--f-mono);font-weight:500;font-size:calc(30*var(--u));letter-spacing:.08em}
 .pC-roleline{left:calc(64*var(--u));top:calc(452*var(--u));font-family:var(--f-mono);font-weight:500;font-size:calc(18*var(--u));letter-spacing:.14em;text-transform:uppercase;line-height:1.6}
-.pC-first{left:calc(64*var(--u));bottom:calc(330*var(--u));font-family:var(--f-serif);font-style:italic;font-size:calc(84*var(--u));line-height:1}
+.pC-first{left:calc(64*var(--u));bottom:calc(330*var(--u));font-family:var(--f-serif);font-style:italic;font-size:calc(84*var(--u));line-height:1;color:var(--green)}
 .pC-last{left:calc(58*var(--u));bottom:calc(178*var(--u));font-family:var(--f-serif);font-size:calc(176*var(--u));line-height:.9;letter-spacing:-.02em}
-.pC-stats{left:calc(64*var(--u));bottom:calc(128*var(--u));font-family:var(--f-mono);font-weight:500;font-size:calc(24*var(--u));letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+.pC-stats{left:calc(64*var(--u));bottom:calc(128*var(--u));font-family:var(--f-mono);font-weight:500;font-size:calc(24*var(--u));letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
 /* D · team sheet (R21) */
-.pD .cv{background:var(--blue);color:var(--white)}
-.pD-grad{left:0;bottom:0;width:calc(372*var(--u));height:calc(560*var(--u));background:linear-gradient(180deg,var(--blue),var(--red))}
+.pD .cv{background:var(--blue);color:var(--chalk)}
+.pD-grad{left:0;bottom:0;width:calc(372*var(--u));height:calc(560*var(--u));background:linear-gradient(180deg,var(--blue),var(--green))}
 .pD-flag{left:0;top:calc(430*var(--u));width:calc(250*var(--u))}
-.pD-flag i{display:block;height:calc(34*var(--u));background:var(--white)}
-.pD-flag i + i{height:calc(56*var(--u));background:var(--red)}
+.pD-flag i{display:block;height:calc(34*var(--u));background:var(--navy)}
+.pD-flag i + i{height:calc(56*var(--u));background:var(--green)}
 .pD-name{left:calc(390*var(--u));top:calc(150*var(--u));height:calc(1000*var(--u));writing-mode:vertical-rl;transform:rotate(180deg);font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(300*var(--u));line-height:.8;text-transform:uppercase;letter-spacing:-.01em;text-align:left}
 .pD-col{left:calc(712*var(--u));right:calc(64*var(--u));top:calc(150*var(--u));display:grid;gap:calc(26*var(--u))}
 .pD-stat{display:grid;grid-template-columns:1fr 1fr;gap:calc(20*var(--u))}
-.pD-col h4{margin:0;font-family:var(--f-display);font-weight:700;font-size:calc(24*var(--u));padding-bottom:calc(8*var(--u));border-bottom:calc(2*var(--u)) solid var(--white)}
+.pD-col h4{font-family:var(--f-display);font-weight:700;font-size:calc(24*var(--u));padding-bottom:calc(8*var(--u));border-bottom:calc(2*var(--u)) solid var(--chalk)}
 .pD-stat b{display:block;font-family:var(--f-display);font-stretch:62%;font-weight:900;font-size:calc(110*var(--u));line-height:.9;margin-top:calc(6*var(--u))}
 .pD-col ul{display:grid;gap:calc(4*var(--u));margin-top:calc(10*var(--u));font-size:calc(22*var(--u));line-height:1.3}
-.pD-watch{left:calc(64*var(--u));bottom:calc(130*var(--u));display:flex;align-items:center;gap:calc(18*var(--u));font-size:calc(22*var(--u));line-height:1.3}
+.pD-watch{left:calc(64*var(--u));bottom:calc(130*var(--u));display:flex;align-items:center;gap:calc(18*var(--u));font-size:calc(22*var(--u));line-height:1.3;color:var(--deep)}
 .pD-watch svg{width:calc(70*var(--u));height:calc(70*var(--u))}
 .pD-watch b{display:block;font-weight:700}
+
 /* rules */
-.rules{background:var(--navy);color:var(--crease)}
-.rules .sh .mono,.rules .sh .lede{color:var(--line)}
-.rules .sh h2 .hot{color:var(--red)}
+.rules{background:var(--deep)}
 .dodont{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 56px}
 .dodont h3{font-size:44px;padding-bottom:10px;border-bottom:2px solid currentColor}
-.dodont .do h3{color:var(--crease)}
-.dodont .dont h3{color:var(--red)}
-.dodont ul{display:grid;gap:0}
-.dodont li{padding-block:14px;border-bottom:1px solid rgba(216,212,202,.25);color:var(--line)}
-.dodont li strong{color:var(--white);font-weight:700}
+.dodont .dont h3{color:var(--green)}
+.dodont li{padding-block:14px;border-bottom:1px solid var(--line);color:var(--fg-2)}
+.dodont li strong{color:var(--fg);font-weight:700}
 @media (max-width:820px){.dodont{grid-template-columns:minmax(0,1fr)}}
 .voice{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:56px}
-.voice > div{border:1px solid rgba(216,212,202,.35);padding:18px;display:grid;gap:12px;align-content:start}
-.voice .mono{color:var(--line);font-size:11px}
-.voice .v-disp{font-size:52px;color:var(--white)}
-.voice .v-serif{font-size:46px;line-height:1;color:var(--white)}
-.voice .v-kin{font-size:30px;color:var(--red)}
-.voice .v-mono{font-family:var(--f-mono);font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--white)}
-.voice p:last-child{font-size:13px;color:var(--line)}
+.voice > div{border:1px solid var(--line-2);padding:18px;display:grid;gap:12px;align-content:start}
+.voice .mono{color:var(--mute);font-size:11px}
+.voice .v-disp{font-size:52px}
+.voice .v-serif{font-size:46px;line-height:1}
+.voice .v-serif em{color:var(--green)}
+.voice .v-kin{font-size:30px;color:var(--green)}
+.voice .v-mono{font-family:var(--f-mono);font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.voice p:last-child{font-size:13px;color:var(--fg-2)}
 @media (max-width:1000px){.voice{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:520px){.voice{grid-template-columns:minmax(0,1fr)}}
 .open{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin-top:56px}
 .open h3{grid-column:1/-1;font-size:44px;margin-bottom:8px}
-.open div{padding-block:16px;border-top:1px solid rgba(216,212,202,.25);display:grid;gap:4px}
-.open b{color:var(--white)}
-.open p{color:var(--line);font-size:15px}
+.open div{padding-block:16px;border-top:1px solid var(--line);display:grid;gap:4px}
+.open p{color:var(--fg-2);font-size:15px}
 @media (max-width:820px){.open{grid-template-columns:minmax(0,1fr)}}
 .foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;padding-block:24px;color:var(--mute)}
 
 /* lightbox */
-#lb{border:0;padding:0;background:rgba(12,13,18,0);max-width:94vw;max-height:94vh}
-#lb::backdrop{background:rgba(12,13,18,.92)}
+#lb{border:0;padding:0;background:rgba(3,9,22,0);max-width:94vw;max-height:94vh}
+#lb::backdrop{background:rgba(3,9,22,.94)}
 #lb img{max-width:94vw;max-height:84vh;width:auto;height:auto;margin-inline:auto}
-#lb .lb-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:10px;color:var(--crease)}
-#lb .lb-close{background:var(--crease);color:var(--ink);border:0;padding:8px 14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+#lb .lb-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:10px;color:var(--fg)}
+#lb .lb-close{background:var(--green);color:var(--deep);border:0;padding:8px 14px;font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
 </style>
 
-<div class="wrap top mono"><span>Imama Cricket League · Season 02</span><span>Moodboard v3 · October 2026</span></div>
+<div class="wrap top mono"><span>Imama Cricket League · Season 02</span><span>Moodboard v4 · October 2026</span></div>
 
 <header class="cover">
-  <div class="kv"><img src="{{img:key-visual}}" alt="A batsman in an electric-blue kit smashes through a giant blue 02 in a burst of red shards and a blue, red and white motion ribbon"></div>
+  <div class="kv"><img src="{{img:key-visual}}" alt="A batsman in a navy and green kit smashes through a giant glowing green 02 in a burst of green and blue shards on a dark navy ground"></div>
   <div class="cover-copy">
-    <img class="cover-logo" src="{{logo:ink}}" alt="Imama Cricket League Season 2 logo">
+    <img class="cover-logo" src="{{logo:white}}" alt="Imama Cricket League Season 2 logo">
     <div>
       <p class="mono" style="margin-bottom:14px">Season 2 visual direction</p>
       <h1 class="disp"><span>Power</span><span class="hot">play</span></h1>
     </div>
-    <p class="tag serif">A whole season played like the first six overs. <em>Red, blue, loud and fast.</em></p>
+    <p class="tag serif">A whole season played like the first six overs, <em>under the lights.</em></p>
   </div>
 </header>
 
@@ -309,16 +313,17 @@ button{font:inherit;color:inherit}
 <main>
 <section class="sec wrap">
   <div class="thesis-grid">
-    <p class="statement serif">Every poster is a powerplay: a <em>bright ground</em>, one huge number, a player breaking out of the frame, and motion in every line.</p>
+    <p class="statement serif">Every poster is a powerplay under lights: a <em>dark ground</em>, one huge green number, a player breaking out of the frame, and motion in every line.</p>
     <div class="source-note">
       <p class="mono">Built from</p>
-      <p><strong>23 references.</strong> R01 to R20 set the layouts and devices. R21 to R23 set the final palette: ball red and electric blue. Season 1 artwork was left out on purpose; nothing here is carried over from it.</p>
-      <p><strong>21 frames generated in Higgsfield</strong> in the final palette, each one traced back to the references it answers.</p>
+      <p><strong>23 references.</strong> R01 to R20 set the layouts and devices; R21 to R23 add the team sheet, the signal look and grain. Season 1 artwork was left out on purpose.</p>
+      <p><strong>The palette is your call from 2 October:</strong> navy, the league's own green, electric blue. White is for type only, and kits are navy with green trim, so nothing reads as a national team's shirt.</p>
+      <p><strong>21 frames generated in Higgsfield</strong> in that palette, each traced back to the references it answers.</p>
     </div>
   </div>
   <ul class="pillars">
-    <li><h3 class="disp">Bright<br><span>ground</span></h3><p>Crease white, ball red or electric blue. Navy is kept for night and signal posts.</p></li>
-    <li><h3 class="disp">Big<br><span>behind</span></h3><p>One giant number or word, 60 to 70% of the poster, always behind the player.</p></li>
+    <li><h3 class="disp">Dark<br><span>ground</span></h3><p>Navy or Deep on most posts. Green grounds for match days, blue for team sheets.</p></li>
+    <li><h3 class="disp">Big<br><span>behind</span></h3><p>One giant green number or word, 60 to 70% of the poster, always behind the player.</p></li>
     <li><h3 class="disp">Motion<br><span>always</span></h3><p>A ribbon, a streak or shards shows the shot. One motion device per poster.</p></li>
     <li><h3 class="disp">Break<br><span>out</span></h3><p>The player crosses a frame edge on every post: a window, a tile, a numeral.</p></li>
   </ul>
@@ -329,7 +334,7 @@ button{font:inherit;color:inherit}
     <div class="sh">
       <p class="mono">The wall</p>
       <h2 class="disp">Hit <span class="hot">different</span></h2>
-      <p class="lede">Twenty frames generated in Higgsfield with GPT Image 2.5 in the final red and blue, one per idea in the references. The caption names the reference each frame answers. Select a frame to see it large.</p>
+      <p class="lede">Twenty frames generated in Higgsfield with GPT Image 2.5 in navy, green and blue, one per idea in the references. The caption names the reference each frame answers. Select a frame to see it large.</p>
     </div>
     <div class="masonry">{{wall}}</div>
   </div>
@@ -339,7 +344,7 @@ button{font:inherit;color:inherit}
   <div class="sh">
     <p class="mono">Sources</p>
     <h2 class="disp">23 references</h2>
-    <p class="lede">The only input to this direction. Each reference is filed under the device family it feeds. They are third-party posters: use them for direction only, and never trace, crop or post them.</p>
+    <p class="lede">The only input to the layouts and devices. Each reference is filed under the device family it feeds. They are third-party posters: use them for direction only, and never trace, crop or post them.</p>
   </div>
   <div class="palette-refs">{{palrefs}}</div>
   <div class="refs">{{refs}}</div>
@@ -349,52 +354,52 @@ button{font:inherit;color:inherit}
 <section class="sec wrap" id="colour" style="padding-top:0">
   <div class="sh">
     <p class="mono">Colour</p>
-    <h2 class="disp">Red <span class="vs">vs</span> blue</h2>
-    <p class="lede">Final. Ball red and electric blue, sampled from R21 to R23, on a Crease-white ground. Navy carries night and signal posts, and Ink carries everything that has to be read.</p>
+    <h2 class="disp">Night <span class="hot">game</span></h2>
+    <p class="lede">Final. Navy grounds, the league's green as the hero and electric blue as the second voice. Chalk white is for type only. No red, no orange.</p>
   </div>
   <div class="swatches">
-    <div class="sw sw-crease"><p class="mono">Ground · #F5F3EE</p><div><h3 class="disp">Crease</h3><p>The default day ground. Warm, like crease paint, never pure white.</p></div></div>
-    <div class="sw sw-red"><p class="mono">Hit · #E92D3C</p><div><h3 class="disp">Ball red</h3><p>The shout: match-day grounds, giant numerals, the hand-drawn circle, one stripe of every ribbon.</p></div></div>
-    <div class="sw sw-blue"><p class="mono">Kit · #1234F9</p><div><h3 class="disp">Electric blue</h3><p>Kits, team sheets, numerals and ribbons. White text on it at any size.</p></div></div>
-    <div class="sw sw-navy"><p class="mono">Night · #061433</p><div><h3 class="disp">Navy</h3><p>Night results, portraits and the duotone signal look.</p></div></div>
-    <div class="sw sw-ink"><p class="mono">Type · #0B0C14</p><div><h3 class="disp">Ink</h3><p>Headlines and data on light grounds, rules, outlines.</p></div></div>
+    <div class="sw sw-navy"><p class="mono">Ground · #061433</p><div><h3 class="disp">Navy</h3><p>The default ground and the kit colour. Most of every poster.</p></div></div>
+    <div class="sw sw-deep"><p class="mono">Night · #030916</p><div><h3 class="disp">Deep</h3><p>Near-black for portraits, results and the signal look.</p></div></div>
+    <div class="sw sw-green"><p class="mono">Hero · #1FCB62</p><div><h3 class="disp">Imama green</h3><p>The logo's green, brightened for dark grounds. Numerals, headlines, kit trim, match-day grounds.</p></div></div>
+    <div class="sw sw-blue"><p class="mono">Second · #1234F9</p><div><h3 class="disp">Electric blue</h3><p>Ribbons, shards, halftone, team-sheet grounds. A shape colour, not a text colour on navy.</p></div></div>
+    <div class="sw sw-chalk"><p class="mono">Type · #EEF2F7</p><div><h3 class="disp">Chalk</h3><p>Type only. Never a ground.</p></div></div>
   </div>
   <div class="colour-detail">
     <div class="mixes">
-      <div class="mix"><p class="mono">Day poster · announcement, squad, player</p><div class="bar"><i class="c-crease" style="--w:55">Crease 55</i><i class="c-blue" style="--w:22">Blue 22</i><i class="c-red" style="--w:13">Red 13</i><i class="c-ink" style="--w:10">Ink 10</i></div></div>
-      <div class="mix"><p class="mono">Match-day poster · match day, countdown, award</p><div class="bar"><i class="c-red" style="--w:60">Red 60</i><i class="c-blue" style="--w:22">Blue 22</i><i class="c-crease" style="--w:12">Crease 12</i><i class="c-ink" style="--w:6">&nbsp;</i></div></div>
-      <div class="mix"><p class="mono">Team sheet · squads, fixtures, standings</p><div class="bar"><i class="c-blue" style="--w:70">Blue 70</i><i class="c-red" style="--w:15">Red 15</i><i class="c-crease" style="--w:15">Crease 15</i></div></div>
-      <div class="mix"><p class="mono">Signal poster · night, launch, finals</p><div class="bar"><i class="c-navy" style="--w:55">Navy 55</i><i class="c-blue" style="--w:28">Blue 28</i><i class="c-red" style="--w:14">Red 14</i><i class="c-crease" style="--w:3">&nbsp;</i></div></div>
+      <div class="mix"><p class="mono">Night poster · announcement, player, result</p><div class="bar"><i class="c-navy" style="--w:62">Navy 62</i><i class="c-green" style="--w:20">Green 20</i><i class="c-blue" style="--w:10">Blue 10</i><i class="c-chalk" style="--w:8">&nbsp;</i></div></div>
+      <div class="mix"><p class="mono">Match-day poster · match day, countdown</p><div class="bar"><i class="c-green" style="--w:58">Green 58</i><i class="c-deep" style="--w:30">Deep 30</i><i class="c-blue" style="--w:12">Blue 12</i></div></div>
+      <div class="mix"><p class="mono">Team sheet · squads, fixtures, standings</p><div class="bar"><i class="c-blue" style="--w:64">Blue 64</i><i class="c-green" style="--w:16">Green 16</i><i class="c-chalk" style="--w:12">Chalk 12</i><i class="c-navy" style="--w:8">&nbsp;</i></div></div>
+      <div class="mix"><p class="mono">Signal poster · launch, finals, reveals</p><div class="bar"><i class="c-deep" style="--w:60">Deep 60</i><i class="c-blue" style="--w:22">Blue 22</i><i class="c-green" style="--w:15">Green 15</i><i class="c-chalk" style="--w:3">&nbsp;</i></div></div>
     </div>
     <div style="overflow-x:auto">
       <table class="pairs">
         <thead><tr><th>Text on ground</th><th>Contrast</th><th>Use</th></tr></thead>
         <tbody>
-          <tr><td><span class="chip c-crease" style="border:1px solid var(--ink)">Aa</span>Ink on Crease</td><td>17.6:1</td><td>Everything</td></tr>
-          <tr><td><span class="chip c-blue">Aa</span>White on Blue</td><td>7.3:1</td><td>Any size</td></tr>
-          <tr><td><span class="chip c-red" style="color:var(--ink)">Aa</span>Ink on Red</td><td>4.6:1</td><td>Any size, data lines</td></tr>
-          <tr><td><span class="chip c-red">Aa</span>White on Red</td><td>4.3:1</td><td>24px and up on the canvas</td></tr>
-          <tr><td><span class="chip c-navy" style="color:var(--red)">Aa</span>Red on Navy</td><td>4.2:1</td><td>Stats and tags, 24px and up</td></tr>
-          <tr><td><span class="chip c-crease" style="color:var(--red);border:1px solid var(--ink)">Aa</span>Red on Crease</td><td>3.9:1</td><td>Display type and shapes</td></tr>
-          <tr><td><span class="chip c-blue" style="color:var(--red)">Aa</span>Red on Blue</td><td>1.7:1</td><td>Never as text. Shapes and duotone only</td></tr>
+          <tr><td><span class="chip c-navy">Aa</span>Chalk on Navy</td><td>16.2:1</td><td>Everything</td></tr>
+          <tr><td><span class="chip c-navy" style="color:var(--green)">Aa</span>Green on Navy</td><td>8.5:1</td><td>Any size</td></tr>
+          <tr><td><span class="chip c-green">Aa</span>Deep on Green</td><td>9.3:1</td><td>Any size: all type on green grounds</td></tr>
+          <tr><td><span class="chip c-blue">Aa</span>Chalk on Blue</td><td>6.5:1</td><td>Any size</td></tr>
+          <tr><td><span class="chip c-blue" style="color:var(--green)">Aa</span>Green on Blue</td><td>3.4:1</td><td>Display type only</td></tr>
+          <tr><td><span class="chip c-navy" style="color:var(--blue)">Aa</span>Blue on Navy</td><td>2.5:1</td><td>Shapes only, never text</td></tr>
+          <tr><td><span class="chip c-green" style="color:var(--chalk)">Aa</span>Chalk on Green</td><td>1.9:1</td><td>Never</td></tr>
         </tbody>
       </table>
     </div>
   </div>
   <div class="logos">
-    <figure><div class="plate c-crease" style="border:1px solid var(--ink)"><img src="{{logo:ink}}" alt="Logo in Ink on Crease"></div><figcaption class="mono">Ink on Crease</figcaption></figure>
-    <figure><div class="plate c-red"><img src="{{logo:white}}" alt="Logo in white on Red"></div><figcaption class="mono">White on Red</figcaption></figure>
-    <figure><div class="plate c-blue"><img src="{{logo:white}}" alt="Logo in white on Blue"></div><figcaption class="mono">White on Blue</figcaption></figure>
     <figure><div class="plate c-navy"><img src="{{logo:white}}" alt="Logo in white on Navy"></div><figcaption class="mono">White on Navy</figcaption></figure>
+    <figure><div class="plate c-deep"><img src="{{logo:white}}" alt="Logo in white on Deep"></div><figcaption class="mono">White on Deep</figcaption></figure>
+    <figure><div class="plate c-green"><img src="{{logo:deep}}" alt="Logo in Deep on Green"></div><figcaption class="mono">Deep on Green</figcaption></figure>
+    <figure><div class="plate c-blue"><img src="{{logo:white}}" alt="Logo in white on Blue"></div><figcaption class="mono">White on Blue</figcaption></figure>
   </div>
-  <p class="note">On posters the lockup is always single colour, recoloured from the existing mono logo files and never redrawn. Its green and purple gradients sit outside this palette, so the full-colour lockup stays on the website, merchandise and print.</p>
+  <p class="note">On posters the lockup is single colour, recoloured from the existing mono logo files and never redrawn. Its green already belongs to this palette; its purple doesn't, so the full-colour lockup stays on the website, merchandise and print.</p>
 </section>
 
 <section class="sec wrap" id="type" style="padding-top:0">
   <div class="sh">
     <p class="mono">Type</p>
     <h2 class="disp">Five voices</h2>
-    <p class="lede">One family does the heavy lifting at two widths. A serif brings the editorial names, a brush script gets one word on loud posters, and mono carries every fact.</p>
+    <p class="lede">One family does the heavy lifting at two widths. A serif brings the editorial names, a brush script gets one word on loud posts, and mono carries every fact.</p>
   </div>
   <div class="specimens">
     <div class="spec">
@@ -407,7 +412,7 @@ button{font:inherit;color:inherit}
     </div>
     <div class="spec">
       <div class="spec-meta"><p class="mono">Editorial</p><h3>Instrument Serif</h3><p>Regular and italic. Player names, game-day headlines, the quiet register.</p></div>
-      <div class="spec-sample"><p class="serif s-serif">Firstname <em>Lastname</em></p></div>
+      <div class="spec-sample"><p class="serif s-serif"><em>Firstname</em> Lastname</p></div>
     </div>
     <div class="spec">
       <div class="spec-meta"><p class="mono">Script</p><h3>Mr Dafoe</h3><p>One word per poster, loud register only, rotated −8° and always crossing Display caps.</p></div>
@@ -424,7 +429,7 @@ button{font:inherit;color:inherit}
       <tbody>
         <tr><td>Giant numeral</td><td>Display 900</td><td class="n">800–1020 px</td><td>02, 3, 07</td></tr>
         <tr><td>Headline</td><td>Display 900</td><td class="n">170–340 px</td><td>MATCH DAY, COMING SOON</td></tr>
-        <tr><td>Player name</td><td>Serif 400</td><td class="n">150–180 px</td><td>Lastname, first name in italic at 80 px above</td></tr>
+        <tr><td>Player name</td><td>Serif 400</td><td class="n">150–180 px</td><td>Lastname, first name in green italic at 80 px above</td></tr>
         <tr><td>Script word</td><td>Mr Dafoe</td><td class="n">140–180 px</td><td>Century, Five-for</td></tr>
         <tr><td>Team names</td><td>Display 900</td><td class="n">90–110 px</td><td>TEAM A vs TEAM B</td></tr>
         <tr><td>Tag</td><td>Kinetic 800</td><td class="n">28–56 px</td><td>PACE, POWER</td></tr>
@@ -452,38 +457,40 @@ button{font:inherit;color:inherit}
     </div>
     <div class="posters">
       <figure class="poster-fig">
-        <div class="poster pA" role="img" aria-label="Season announcement poster: giant red 02 behind a batsman with a blue ribbon, headline Coming soon"><div class="cv">
+        <div class="poster pA" role="img" aria-label="Season announcement poster: giant green 02 on navy behind a batsman with a blue ribbon, headline Coming soon"><div class="cv">
+          <div class="p-glow"></div>
           <div class="pA-num num">02</div>
           <svg class="pA-rib" viewBox="0 0 1080 1350" aria-hidden="true">
             <path d="M 1146 1030 C 886 950, 706 580, 536 380 C 466 300, 420 240, 396 200" fill="none" stroke="#1234F9" stroke-width="46" stroke-linecap="round"/>
-            <path d="M 1146 1030 C 886 950, 706 580, 536 380 C 466 300, 420 240, 396 200" fill="none" stroke="#F5F3EE" stroke-width="5" stroke-linecap="round" stroke-dasharray="26 14"/>
-            <path d="M 1116 1086 C 846 1000, 656 630, 490 430 C 430 358, 388 302, 366 264" fill="none" stroke="#1234F9" stroke-width="12" stroke-linecap="round" opacity=".55"/>
+            <path d="M 1146 1030 C 886 950, 706 580, 536 380 C 466 300, 420 240, 396 200" fill="none" stroke="#EEF2F7" stroke-width="5" stroke-linecap="round" stroke-dasharray="26 14"/>
+            <path d="M 1116 1086 C 846 1000, 656 630, 490 430 C 430 358, 388 302, 366 264" fill="none" stroke="#1FCB62" stroke-width="12" stroke-linecap="round" opacity=".7"/>
           </svg>
           <div class="p-shadow"></div>
           <img class="pA-cut" src="{{cut:batsman}}" alt="">
-          <img class="p-logo" src="{{logo:ink}}" alt="">
+          <img class="p-logo" src="{{logo:white}}" alt="">
           <p class="p-meta">Season 02<br>UAE · 2026</p>
           <p class="pA-kin">Imama Cricket League is back</p>
           <h3 class="pA-head">Coming soon</h3>
           <div class="p-foot"><span>Follow for fixtures</span><span>+</span><span>@handle</span></div>
         </div></div>
-        <figcaption><b>A · Season announcement</b><span>Crease ground, giant red numeral, blue ribbon with a stitched seam on the bat swing.</span></figcaption>
+        <figcaption><b>A · Season announcement</b><span>Navy ground, giant green numeral, blue ribbon with a stitched seam on the bat swing.</span></figcaption>
       </figure>
       <figure class="poster-fig">
-        <div class="poster pB" role="img" aria-label="Match day poster: white Match day headline on red, a bowler in front with speed streaks, Team A vs Team B"><div class="cv">
+        <div class="poster pB" role="img" aria-label="Match day poster: deep navy Match day headline on green, a bowler in front with speed streaks, Team A vs Team B"><div class="cv">
           <h3 class="pB-head">Match<br>day</h3>
           {{streaks}}
           <div class="p-shadow"></div>
           <img class="pB-cut" src="{{cut:bowler}}" alt="">
-          <img class="p-logo" src="{{logo:white}}" alt="">
+          <img class="p-logo" src="{{logo:deep}}" alt="">
           <p class="p-meta">M07<br>Group stage</p>
           <div class="pB-teams"><span>Team A</span><em>vs</em><span>Team B</span></div>
           <div class="p-foot"><span>Sat 12 Dec</span><span>+</span><span>18:30</span><span>+</span><span>Ground 01</span></div>
         </div></div>
-        <figcaption><b>B · Match day</b><span>Red ground with scanlines, the bowler breaks the headline, streaks trail the run-up.</span></figcaption>
+        <figcaption><b>B · Match day</b><span>Green ground with scanlines, the bowler breaks the headline, streaks trail the run-up.</span></figcaption>
       </figure>
       <figure class="poster-fig">
-        <div class="poster pC" role="img" aria-label="Player feature poster: all-rounder on a navy ground with blue halftone and an outlined red 07, name in serif"><div class="cv">
+        <div class="poster pC" role="img" aria-label="Player feature poster: all-rounder on a near-black ground with blue halftone and an outlined green 07, name in serif"><div class="cv">
+          <div class="p-glow"></div>
           <div class="pC-dots"></div>
           <div class="pC-num num">07</div>
           <img class="pC-cut" src="{{cut:allrounder}}" alt="">
@@ -497,10 +504,10 @@ button{font:inherit;color:inherit}
           <p class="pC-stats num">312 runs + SR 151.4 + 14 wkts</p>
           <div class="p-foot"><span>ICL</span><span>+</span><span>Season 02</span><span>+</span><span>Team A</span></div>
         </div></div>
-        <figcaption><b>C · Player feature</b><span>Navy ground, blue halftone, outlined red jersey number, serif name.</span></figcaption>
+        <figcaption><b>C · Player feature</b><span>Deep ground, blue halftone and glow, outlined green jersey number, serif name.</span></figcaption>
       </figure>
       <figure class="poster-fig">
-        <div class="poster pD" role="img" aria-label="Team sheet poster: electric blue ground, team name set vertically, squad listed by role in a right-hand column"><div class="cv">
+        <div class="poster pD" role="img" aria-label="Team sheet poster: electric blue ground with a green fade, team name set vertically, squad listed by role in a right-hand column"><div class="cv">
           <div class="pD-grad"></div>
           <div class="pD-flag"><i></i><i></i></div>
           <img class="p-logo" src="{{logo:white}}" alt="">
@@ -513,10 +520,10 @@ button{font:inherit;color:inherit}
             <div><h4>Keeper</h4><ul><li>Player 08</li></ul></div>
             <div><h4>Bowlers</h4><ul><li>Player 09</li><li>Player 10</li><li>Player 11</li></ul></div>
           </div>
-          <div class="pD-watch"><svg viewBox="0 0 70 70" aria-hidden="true"><circle cx="35" cy="35" r="32" fill="none" stroke="#fff" stroke-width="2.5"/><path d="M14 16 C 30 28, 40 42, 56 54 M20 11 C 36 23, 46 37, 60 48" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 3"/></svg><span>Player to watch<b>Player 07</b></span></div>
+          <div class="pD-watch"><svg viewBox="0 0 70 70" aria-hidden="true"><circle cx="35" cy="35" r="32" fill="none" stroke="#030916" stroke-width="2.5"/><path d="M14 16 C 30 28, 40 42, 56 54 M20 11 C 36 23, 46 37, 60 48" fill="none" stroke="#030916" stroke-width="2" stroke-dasharray="4 3"/></svg><span>Player to watch<b>Player 07</b></span></div>
           <div class="p-foot"><span>ICL</span><span>+</span><span>Season 02</span><span>+</span><span>Squad of 11</span></div>
         </div></div>
-        <figcaption><b>D · Team sheet</b><span>From R21: electric blue, a red fade, the name set vertically, the squad in one column.</span></figcaption>
+        <figcaption><b>D · Team sheet</b><span>From R21: electric blue, a green fade, the name set vertically, the squad in one column.</span></figcaption>
       </figure>
     </div>
   </div>
@@ -532,31 +539,31 @@ button{font:inherit;color:inherit}
     <div class="dodont">
       <div class="do"><h3 class="disp">Do</h3><ul>
         <li><strong>One number, one player, one motion device.</strong> That is the whole hierarchy.</li>
-        <li><strong>Pick one ground per post:</strong> Crease, Red or Blue. Navy is for night and signal posts.</li>
+        <li><strong>Keep it dark.</strong> Navy or Deep on most posts; Green for match days, Blue for team sheets.</li>
         <li><strong>Break a frame on every post.</strong> A window, a tile, a numeral or the headline.</li>
         <li><strong>Set every fact in Mono</strong>, caps, with "+" or "·" between items.</li>
         <li><strong>Write scores the cricket way:</strong> 104* (58), 3/18 (4), 18.4 ov.</li>
       </ul></div>
       <div class="dont"><h3 class="disp">Don't</h3><ul>
-        <li><strong>Never set red text on blue or blue on red.</strong> At 1.7:1 it vibrates and can't be read. They meet as shapes only.</li>
-        <li><strong>No orange, green or purple</strong> in season artwork. The palette is final.</li>
-        <li><strong>No full-colour gradient logo on a poster.</strong> Single colour only.</li>
-        <li><strong>No drop shadows on type or cards.</strong> Contact shadows under players only.</li>
+        <li><strong>No white grounds.</strong> Chalk is for type only.</li>
+        <li><strong>No white text on green (1.9:1) and no blue text on navy (2.5:1).</strong> Deep goes on green; blue is a shape colour.</li>
+        <li><strong>No blue kits with orange or saffron trim.</strong> They read as India's shirt. Kits are navy with green trim.</li>
+        <li><strong>No red, orange or purple</strong> in season artwork, and no full-colour gradient logo on a poster.</li>
         <li><strong>No emoji, hashtags or exclamation marks</strong> on the artwork. Scale does the shouting.</li>
       </ul></div>
     </div>
     <div class="voice">
       <div><p class="mono">Headline · 1–3 words</p><p class="disp v-disp">Days to go</p><p>Display caps. No punctuation.</p></div>
-      <div><p class="mono">Name · title case</p><p class="serif v-serif">Firstname <em>Lastname</em></p><p>Serif. First name in italic.</p></div>
-      <div><p class="mono">Tag · one word</p><p class="kin v-kin">Power</p><p>Kinetic italic, Red on light grounds.</p></div>
+      <div><p class="mono">Name · title case</p><p class="serif v-serif"><em>Firstname</em> Lastname</p><p>Serif. First name in green italic.</p></div>
+      <div><p class="mono">Tag · one word</p><p class="kin v-kin">Power</p><p>Kinetic italic, green.</p></div>
       <div><p class="mono">Data · dry facts</p><p class="v-mono num">Sat 12 Dec + 18:30 + Ground 01</p><p>Mono. Abbreviations only here.</p></div>
     </div>
     <div class="open">
       <h3 class="disp">Open before production</h3>
-      <div><b>Team kits</b><p>Every frame uses one stand-in kit: electric blue with red and white trim. Swap in the real Season 2 team colours once kits are confirmed; red and blue stay the league's colours.</p></div>
+      <div><b>Team kits</b><p>Every frame uses one stand-in kit: navy with green trim. Swap in real team colours once the Season 2 kits are confirmed; navy and green stay the league's colours.</p></div>
+      <div><b>Country colours</b><p>Navy with green trim doesn't match a national side. An all-green kit would read as Pakistan or Bangladesh, so keep green to trim and graphics.</p></div>
       <div><b>Real players</b><p>All faces are AI stand-ins. Shoot real players full body on a plain light-grey wall with hard light, to match the cut-out brief.</p></div>
-      <div><b>Logo colour</b><p>The green and purple lockup sits outside the red and blue palette. Decide whether posters stay single colour, as this board assumes, or the logo gets a red and blue Season 2 variant.</p></div>
-      <div><b>Text inside frames</b><p>Several generated frames carry AI-set words and invented placeholder names (the Swiss team sheet, the squad line-up). Reset all copy in the real fonts before anything is posted.</p></div>
+      <div><b>Text inside frames</b><p>Several generated frames carry AI-set words and invented placeholder names (the team sheet, the squad line-up). Reset all copy in the real fonts before anything is posted.</p></div>
     </div>
   </div>
 </section>
