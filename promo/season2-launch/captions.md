@@ -57,3 +57,20 @@ New season. Same rivalries.
 Follow and turn on notifications to be first to hear about teams, fixtures and registration.
 
 #ImamaCricketLeague #ICLSeason2 #UAECricket #UAEImama #ComingSoon
+
+---
+
+# v3: logo launch with title sponsors
+
+File: `ig-post-sponsors-launch.png` (1080×1350). Source: `source/make_sponsor_post.py`; sponsor logos in `source/sponsors/`.
+
+## Caption
+
+The wait is almost over.
+Imama Cricket League, Season 2, is coming soon.
+
+Proudly backed by our title sponsors, VIP Government Transactions Center L.L.C and EASYWAY (Tas-heel · Taw-jeeh · Tad-beer).
+
+Follow and turn on notifications to be first to know.
+
+#ImamaCricketLeague #ICLSeason2 #UAECricket #UAEImama #ComingSoon
