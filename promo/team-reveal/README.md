@@ -21,4 +21,4 @@ Real photos only, shown in black and white. Anyone without a photo gets a "PHOTO
 | Smart Pass | Shuhaib (icon), Sayyid Hashir (manager) |
 | Brothers Untd. | Azad AK (icon), Mohd. Usama (manager) |
 
-People were matched to photos by eye against the Season 2 auction posters. Check every face before posting.
+People were matched to photos by eye against the Season 2 auction posters. Kahkashan (Rizwan, Noufan, Murshid) is confirmed by the organiser; check the other faces before posting.
