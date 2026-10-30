@@ -13,9 +13,9 @@
        {"role": "MANAGER", "name": "Mammu Kodiyamma", "photo": null}]},
     {"no": "03", "slug": "enhance-royals", "name": ["enhance", "royals"], "colors": ["#3d7bff", "#f2b81c"],
      "people": [
-       {"role": "ICON", "name": "Sinan Nekraje", "photo": null},
+       {"role": "ICON", "name": "Sinan Nekraje", "photo": "4f91ec61.jpg", "crop": [190, 0, 560]},
        {"role": "OWNER", "name": "Hamsa", "photo": "586cc834.jpg", "crop": [155, 350, 480]},
-       {"role": "MANAGER", "name": "Mahroof MA", "photo": null}]},
+       {"role": "MANAGER", "name": "Mahroof MA", "photo": "d44ef099.jpg", "crop": [400, 420, 520]}]},
     {"no": "04", "slug": "kahkashan", "name": ["kahkashan", ""], "colors": ["#f2b81c", "#ffe08a"],
      "people": [
        {"role": "ICON", "name": "Rizwan", "photo": "0c44130b.jpg", "crop": [180, 140, 620]},
