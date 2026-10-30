@@ -29,7 +29,7 @@
     {"no": "06", "slug": "brothers-untd", "name": ["brothers", "untd."], "colors": ["#2fae55", "#f6c915"],
      "people": [
        {"role": "ICON", "name": "Azad AK", "photo": null},
-       {"role": "OWNER", "name": "Suhail EP", "photo": "16dc84e9.jpg", "crop": [180, 290, 520]},
-       {"role": "MANAGER", "name": "Mohd. Usama", "photo": null}]}
+       {"role": "OWNER", "name": "Suhail EP", "photo": "29d80555.jpg", "crop": [180, 60, 760]},
+       {"role": "MANAGER", "name": "Mohd. Usama", "photo": "bcf157ab.jpg", "crop": [180, 290, 520]}]}
   ]
 }
