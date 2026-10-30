@@ -25,7 +25,7 @@
      "people": [
        {"role": "ICON", "name": "Shuhaib", "photo": null},
        {"role": "OWNER", "name": "Basheer", "photo": "3f4f721c.jpg", "crop": [100, 200, 1000]},
-       {"role": "MANAGER", "name": "Sayyid Hashir", "photo": null}]},
+       {"role": "MANAGER", "name": "Sayyid Hashir", "photo": "e971d6b4.jpg", "crop": [180, 190, 520]}]},
     {"no": "06", "slug": "brothers-untd", "name": ["brothers", "untd."], "colors": ["#2fae55", "#f6c915"],
      "people": [
        {"role": "ICON", "name": "Azad AK", "photo": null},
