@@ -52,9 +52,10 @@ def name_text(x, y, text, max_w, size, fill='#ffffff', anchor='middle'):
 
 
 def team_title(x, y, t, max_w, size, anchor='middle'):
-    a, b = t['name']
+    a, b = (n.upper() for n in t['name'])
     label = f'{a} {b}'.strip()
-    size = min(size, max_w / (len(label) * 0.62))
+    # Montserrat Alternates Bold caps average ~0.74em per glyph
+    size = min(size, max_w / (len(label) * 0.74))
     tail = f'<tspan dx="{size*0.26:.1f}" fill="{t["colors"][1]}">{esc(b)}</tspan>' if b else ''
     return (f'<text x="{x}" y="{y}" font-family="Montserrat Alternates" font-weight="700" font-size="{size:.1f}" '
             f'letter-spacing="{-size*0.02:.1f}" fill="{t["colors"][0]}" text-anchor="{anchor}">{esc(a)}{tail}</text>')
