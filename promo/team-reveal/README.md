@@ -20,3 +20,7 @@ Real photos only, shown in black and white. Anyone without a photo gets a "PHOTO
 | Brothers Untd. | Azad AK (icon) |
 
 People were matched to photos by eye against the Season 2 auction posters. Kahkashan, Enhance Royals, Brothers Untd. and Yazbatheel photos were supplied per team by the organiser; check the other faces before posting.
+
+## Sponsor line
+
+`source/sponsors-white.png` (EASYWAY | VIP) sits above the league logo. It was lifted from the logo-launch poster at low resolution; swap in the sponsors' original logo files when available.

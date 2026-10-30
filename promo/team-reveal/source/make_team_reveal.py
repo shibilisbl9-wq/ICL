@@ -34,6 +34,12 @@ def prep_photo(p):
     return f'photos/{out.name}'
 
 
+def sponsors(x, y, w):
+    # EASYWAY | VIP title-sponsor line, sits above the league logo (lifted from the logo-launch poster)
+    h = w * 71 / 794
+    return f'<image xlink:href="sponsors-white.png" x="{x}" y="{y}" width="{w}" height="{h:.1f}"/>'
+
+
 def logo(x, y, w):
     h = w * 580 / 690
     return f'<svg x="{x}" y="{y}" width="{w}" height="{h:.0f}" viewBox="140 300 690 580">{LOGO_INNER}</svg>'
@@ -103,7 +109,7 @@ def svg(content, d):
 
 def team_poster(t, hrefs):
     c1, c2 = t['colors']
-    parts = [logo(56, 48, 210),
+    parts = [sponsors(84, 44, 180), logo(56, 74, 210),
              caps(1024, 92, f'TEAM {t["no"]}', 22, c1, 'end'),
              caps(1024, 126, 'OF 6', 16, LAV, 'end'),
              caps(540, 372, 'SEASON 2  ·  TEAM REVEAL'),
@@ -123,7 +129,7 @@ def team_poster(t, hrefs):
 
 
 def group_poster(all_hrefs):
-    parts = [logo(56, 40, 180),
+    parts = [sponsors(80, 34, 155), logo(56, 60, 180),
              caps(1024, 130, 'SEASON 2  ·  TEAM REVEAL', 18, GREEN_B, 'end'),
              f'<text x="1024" y="222" font-family="Montserrat Alternates" font-weight="700" font-size="84" letter-spacing="-1.7" fill="#ffffff" text-anchor="end">meet the six.</text>']
     cw, ch, gx = 470, 300, 20
