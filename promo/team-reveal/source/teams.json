@@ -1,0 +1,35 @@
+{
+  "_note": "Order follows the auction poster (01-06). photo = file in photos/raw (null = placeholder). crop = [x, y, size] square in source pixels.",
+  "teams": [
+    {"no": "01", "slug": "blue-tick", "name": ["blue", "tick"], "colors": ["#3d7bff", "#d9e8ff"],
+     "people": [
+       {"role": "ICON", "name": "Kamaruddeen", "photo": "f77c3d6c.jpg", "crop": [445, 200, 1080]},
+       {"role": "OWNER", "name": "Namsheer", "photo": "0887dc0b.jpg", "crop": [190, 80, 560]},
+       {"role": "MANAGER", "name": "Anwar Thotty", "photo": "06407867.jpg", "crop": [380, 250, 450]}]},
+    {"no": "02", "slug": "yazbatheel", "name": ["yazbatheel", ""], "colors": ["#a45cff", "#dcbcff"],
+     "people": [
+       {"role": "ICON", "name": "Rishal Kannikkad", "photo": null},
+       {"role": "OWNER", "name": "Hakeem Bayar", "photo": "d8f8a0e4.jpg", "crop": [260, 50, 420]},
+       {"role": "MANAGER", "name": "Mammu Kodiyamma", "photo": null}]},
+    {"no": "03", "slug": "enhance-royals", "name": ["enhance", "royals"], "colors": ["#3d7bff", "#f2b81c"],
+     "people": [
+       {"role": "ICON", "name": "Sinan Nekraje", "photo": null},
+       {"role": "OWNER", "name": "Hamsa", "photo": "586cc834.jpg", "crop": [155, 350, 480]},
+       {"role": "MANAGER", "name": "Mahroof MA", "photo": null}]},
+    {"no": "04", "slug": "kahkashan", "name": ["kahkashan", ""], "colors": ["#f2b81c", "#ffe08a"],
+     "people": [
+       {"role": "ICON", "name": "Rizwan", "photo": "0c44130b.jpg", "crop": [180, 140, 620]},
+       {"role": "OWNER", "name": "Noufan", "photo": "9d86bae8.jpg", "crop": [130, 200, 600]},
+       {"role": "MANAGER", "name": "Murshid", "photo": "45f4c429.jpg", "crop": [290, 30, 640]}]},
+    {"no": "05", "slug": "smart-pass", "name": ["smart", "pass"], "colors": ["#2fc46b", "#e3f6ea"],
+     "people": [
+       {"role": "ICON", "name": "Shuhaib", "photo": null},
+       {"role": "OWNER", "name": "Basheer", "photo": "3f4f721c.jpg", "crop": [100, 200, 1000]},
+       {"role": "MANAGER", "name": "Sayyid Hashir", "photo": null}]},
+    {"no": "06", "slug": "brothers-untd", "name": ["brothers", "untd."], "colors": ["#2fae55", "#f6c915"],
+     "people": [
+       {"role": "ICON", "name": "Azad AK", "photo": null},
+       {"role": "OWNER", "name": "Suhail EP", "photo": "16dc84e9.jpg", "crop": [180, 290, 520]},
+       {"role": "MANAGER", "name": "Mohd. Usama", "photo": null}]}
+  ]
+}
