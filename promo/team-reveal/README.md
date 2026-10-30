@@ -16,8 +16,7 @@ Real photos only, shown in black and white. Anyone without a photo gets a "PHOTO
 
 | Team | Missing |
 |---|---|
-| Yazbatheel | Rishal Kannikkad (icon), Mammu Kodiyamma (manager) |
 | Smart Pass | Shuhaib (icon), Sayyid Hashir (manager) |
 | Brothers Untd. | Azad AK (icon) |
 
-People were matched to photos by eye against the Season 2 auction posters. Kahkashan, Enhance Royals and Brothers Untd. photos were supplied per team by the organiser; check the other faces before posting.
+People were matched to photos by eye against the Season 2 auction posters. Kahkashan, Enhance Royals, Brothers Untd. and Yazbatheel photos were supplied per team by the organiser; check the other faces before posting.

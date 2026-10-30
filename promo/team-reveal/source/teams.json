@@ -8,9 +8,9 @@
        {"role": "MANAGER", "name": "Anwar Thotty", "photo": "06407867.jpg", "crop": [380, 250, 450]}]},
     {"no": "02", "slug": "yazbatheel", "name": ["yazbatheel", ""], "colors": ["#a45cff", "#dcbcff"],
      "people": [
-       {"role": "ICON", "name": "Rishal Kannikkad", "photo": null},
+       {"role": "ICON", "name": "Rishal Kannikkad", "photo": "6e9c5541.jpg", "crop": [436, 545, 1650]},
        {"role": "OWNER", "name": "Hakeem Bayar", "photo": "d8f8a0e4.jpg", "crop": [260, 50, 420]},
-       {"role": "MANAGER", "name": "Mammu Kodiyamma", "photo": null}]},
+       {"role": "MANAGER", "name": "Mammu Kodiyamma", "photo": "4e18a940.jpg", "crop": [0, 20, 387]}]},
     {"no": "03", "slug": "enhance-royals", "name": ["enhance", "royals"], "colors": ["#3d7bff", "#f2b81c"],
      "people": [
        {"role": "ICON", "name": "Sinan Nekraje", "photo": "4f91ec61.jpg", "crop": [190, 0, 560]},
